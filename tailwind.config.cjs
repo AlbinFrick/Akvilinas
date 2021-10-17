@@ -21,11 +21,15 @@ const config = {
         startSmall: "url('/images/startSmall.png')",
         start: "url('/images/start.png')",
         startOriginal: "url('/images/start.jpg')",
+      },
+      scale: {
+        '200': '2',
+        '300': '3'
       }
     }
   },
 
-  plugins: []
+  plugins: [require('@tailwindcss/aspect-ratio')]
 };
 
 module.exports = config;

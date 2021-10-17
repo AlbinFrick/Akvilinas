@@ -6,8 +6,8 @@
 <li>
   <a
     class={`
-	px-3 
-	py-2 
+	px-4 
+	py-4 
 	rounded-lg
 	transition
 
