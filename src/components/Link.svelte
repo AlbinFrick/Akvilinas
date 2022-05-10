@@ -3,7 +3,7 @@
 </script>
 
 <a
-  class=" p-4 underline text-blue-400 hover:text-blue-600 visited:text-purple-800"
+  class="underline underline-offset-2 text-black hover:text-black/75 hover:underline-offset-4 "
   href={link}
 >
   <slot />
