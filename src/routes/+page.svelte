@@ -1,0 +1,29 @@
+<script>
+	import ImageGrid from '$lib/components/ImageGrid.svelte';
+</script>
+
+<div class="mx-auto max-w-7xl px-6 lg:px-8 lg:pt-32">
+	<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none">
+		<div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl lg:mt-32">
+			<h1 class="text-6xl font-bold tracking-tight text-gray-900 sm:text-6xl">Akvilinas fika</h1>
+			<p
+				class="relative font-arapey mt-6 text-2xl leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
+			>
+				Välkommen till Akvilinas Fika! Här kan du beställa en tårta skräddarsydd efter dina
+				önskemål. Vi bakar bland annat moussetårtor, figurtårtor och våningstårtor. Vår tårtverkstad
+				finns i Lycksele med möjlighet till leverans till orter runtomkring. Välkommen med din
+				beställning!
+			</p>
+			<div class="mt-10 flex items-center gap-x-6">
+				<!-- <a href="/kontakt" class={cn(buttonVariants({variant: 'secondary', size: 'lg'}), 'text-xl text-white')} >Ta kontakt!</a> -->
+			</div>
+		</div>
+		<ImageGrid />
+	</div>
+</div>
+
+<!-- 		fontFamily: { -->
+<!-- 	sans: ['"Playfair Display"', ...defaultTheme.fontFamily.sans], -->
+<!-- 	arapey: ['Arapey'], -->
+<!-- 	playfairDisplay: ['Playfair Display'] -->
+<!-- } -->
