@@ -21,9 +21,3 @@
 		<ImageGrid />
 	</div>
 </div>
-
-<!-- 		fontFamily: { -->
-<!-- 	sans: ['"Playfair Display"', ...defaultTheme.fontFamily.sans], -->
-<!-- 	arapey: ['Arapey'], -->
-<!-- 	playfairDisplay: ['Playfair Display'] -->
-<!-- } -->

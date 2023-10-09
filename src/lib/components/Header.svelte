@@ -8,9 +8,14 @@
 		<img src="/logo.png" alt="Akvilinas fika" class="rounded-xl max-h-11" />
 	</a>
 	<nav>
-		<ul class="flex gap-6">
+		<ul class="gap-6 hidden md:flex">
 			<li>
 				<a href="/kontakt" class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}>Kontakt</a>
+			</li>
+			<li>
+				<a href="/om-akvilinas" class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}
+					>Om Akvilinas</a
+				>
 			</li>
 			<li>
 				<a href="/galleri" class={cn(buttonVariants({ variant: 'link' }), 'text-xl ')}
