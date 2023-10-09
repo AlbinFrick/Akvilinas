@@ -23,7 +23,7 @@
 				>
 			</li>
 			<li>
-				<a href="/faq" class={cn(buttonVariants({ variant: 'link' }), 'text-xl ')}>FAQ</a>
+				<a href="/aktuellt" class={cn(buttonVariants({ variant: 'link' }), 'text-xl ')}>Aktuellt</a>
 			</li>
 		</ul>
 	</nav>
