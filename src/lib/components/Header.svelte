@@ -22,9 +22,6 @@
 					>Bildgalleri</a
 				>
 			</li>
-			<li>
-				<a href="/aktuellt" class={cn(buttonVariants({ variant: 'link' }), 'text-xl ')}>Aktuellt</a>
-			</li>
 		</ul>
 	</nav>
 </header>
