@@ -3,7 +3,7 @@
 	import Text from '$lib/components/Text.svelte';
 </script>
 
-<div class="flex flex-col md:flex-row-reverse gap-6 w-full mt-8">
+<div class="flex flex-col md:flex-row-reverse gap-6 w-full mt-8 px-6">
 	<div class="snap-y mt-6">
 		<h1 class="scroll-m-20 mb-3 text-4xl font-medium tracking-tight lg:text-5xl">Hilda Akvilina</h1>
 		<Text>
@@ -13,7 +13,7 @@
 			2011 har jag experimenterat med recept, utbildat mig till konditor, jobbat på olika kaféer och
 			fått veta att jag har celiaki.
 		</Text>
-		<Divider style="w-1/2 mx-auto my-4" />
+		<Divider style="w-1/2 mx-auto my-3 md:my-4" />
 		<Text>
 			Celiaki - glutenintolerans i folkmun. Det betyder helt enkelt att jag inte kan äta gluten som
 			finns i vetemjöl och andra mjöler. Jag fick veta att jag hade denna sjukdomen efter min
@@ -21,7 +21,7 @@
 			de med gott resultat! Att baka utan gluten är ibland en utmaning, men jag prövar mina recept
 			väl och låter alltid personer som inte har celiaki smaka.
 		</Text>
-		<Divider style="w-1/2 mx-auto my-4" />
+		<Divider style="w-1/2 mx-auto my-3 md:my-4" />
 		<Text>
 			Jag har tagit beställningar på tårtor mer eller mindre sedan 2014. Nu, nästan 10 år senare
 			bestämde jag under min mammaledighet för att bygga en tårtverkstad i vårt gårdhus. Så med min
