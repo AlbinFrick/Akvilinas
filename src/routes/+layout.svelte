@@ -11,7 +11,7 @@
 </svelte:head>
 
 <Header />
-<main class="w-full max-w-7xl mx-auto">
+<main class="w-full max-w-7xl mx-auto font-playfair">
 	<slot />
 </main>
 
