@@ -5,7 +5,9 @@
 <div class="mx-auto max-w-7xl overflow-hidden">
 	<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none px-6 lg:px-9">
 		<div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl lg:mt-32 mt-4">
-			<h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">Akvilinas fika</h1>
+			<h1 class="text-5xl font-playfair font-bold tracking-tight text-gray-900 sm:text-6xl">
+				Akvilinas fika
+			</h1>
 			<p
 				class="relative font-arapey mt-6 text-xl md:text-2xl leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
 			>
