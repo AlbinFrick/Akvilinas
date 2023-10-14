@@ -1,0 +1,8 @@
+services:
+  myapp:
+    image: akvilinas-dev
+    ports:
+      - '3000:5173'
+    volumes:
+      - .:/app
+    command: ['tail', '-f', '/dev/null']
