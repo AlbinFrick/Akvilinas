@@ -14,9 +14,9 @@
 				finns i Lycksele med möjlighet till leverans till orter runtomkring. Välkommen med din
 				beställning!
 			</p>
-			<div class="mt-10 flex items-center gap-x-6">
-				<!-- <a href="/kontakt" class={cn(buttonVariants({variant: 'secondary', size: 'lg'}), 'text-xl text-white')} >Ta kontakt!</a> -->
-			</div>
+			<!-- <div class="mt-10 flex items-center gap-x-6">
+				<!-- <a href="/kontakt" class={cn(buttonVariants({variant: 'secondary', size: 'lg'}), 'text-xl text-white')} >Ta kontakt!</a> 
+			</div>-->
 		</div>
 		<ImageGrid />
 	</div>
