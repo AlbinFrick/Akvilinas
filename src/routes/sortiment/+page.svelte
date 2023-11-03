@@ -1,3 +1,11 @@
+<script>
+
+	/** @type {import('./$types').PageData} */
+	export let data;
+  const { products } = data 
+  console.log(products)
+</script>
+
 <h1 class="mt-8">Mitt Sortiment</h1>
 <p class="max-w-prose">
 	Jag har ett standard sortiment som man alltid kan betälla. Dessa är det som finns här under. Vill

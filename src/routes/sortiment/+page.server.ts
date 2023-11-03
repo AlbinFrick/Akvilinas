@@ -1,9 +1,9 @@
-import { getGallery } from '$lib/sanity';
-import type { gallery } from '../../types/gallery';
+import { getProducts } from '$lib/sanity';
+import type { Product } from '../../types/product';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
 	return {
-		gallery: (await getProducts()) as gallery[]
+		products: (await getProducts()) as Array<Product>
 	};
 }
