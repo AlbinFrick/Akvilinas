@@ -34,3 +34,7 @@ const builder = imageUrlBuilder(client);
 export function urlFor(source: SanityImageSource) {
 	return builder.image(source);
 }
+
+export async function getProducts() {
+	return await client.fetch(`*[_type == 'product']`);
+}

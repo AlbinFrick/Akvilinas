@@ -13,7 +13,7 @@
 <Header />
 <!-- This div is it to make the image grid flow outside of the screen -->
 <div class="overflow-hidden">
-	<main class="w-full max-w-7xl mx-auto font-playfair">
+	<main class="w-full max-w-7xl mx-auto font-playfair prose">
 		<slot />
 	</main>
 </div>
