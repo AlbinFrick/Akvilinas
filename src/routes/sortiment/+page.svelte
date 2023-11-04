@@ -1,11 +1,11 @@
 <script>
+	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import { urlFor } from '$lib/sanity';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 	const { products } = data;
-	console.log(products);
 </script>
 
 <section class="px-6 prose-h1:mb-3">
@@ -22,11 +22,18 @@
 	{#each products as product}
 		<div class="flex shadow flex-col justify-between gap-6 bg-white rounded-2xl pb-6">
 			<div class="flex flex-col gap-4">
-				<img
-					class="rounded-t-xl aspect-[4/3] object-cover"
-					src={urlFor(product.image).url()}
-					alt={product.name}
-				/>
+				<div class="relative">
+					<img
+						class="rounded-t-xl w-full aspect-[4/3] object-cover"
+						src={urlFor(product.image).url()}
+						alt={product.name}
+					/>
+					<div class="absolute right-3 bottom-3 flex gap-4">
+						{#each product.allergens as allergen}
+							<Badge variant="secondary" class="bg-orange-200">{allergen}</Badge>
+						{/each}
+					</div>
+				</div>
 				<div class="px-6">
 					<h2>{product.name}</h2>
 					<p>
@@ -43,7 +50,7 @@
 					<p>{product.description}</p>
 				</div>
 			</div>
-			<Button variant="outline" class="w-min self-center justify-self-end mt-2">Lägg till</Button>
+			<Button class="w-min self-center justify-self-end mt-2">Lägg till</Button>
 		</div>
 	{/each}
 </section>
