@@ -3,10 +3,9 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	console.log(data.gallery);
 </script>
 
-<div class="flex flex-col gap-4 lg:gap-9">
+<div class="flex flex-col gap-4 lg:gap-9 not-prose my-4 md:my-12 px-4">
 	{#each data.gallery as gallery}
 		<div class="flex flex-col lg:flex-row gap-4 lg:gap-9">
 			<div class="flex flex-col-reverse lg:flex-col gap-4 lg:gap-9 flex-1">
