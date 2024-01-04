@@ -5,7 +5,6 @@
 	import { Button } from '$lib/components/ui/button';
 
 	const links = [
-		{ name: 'Hem', href: '/' },
 		{ name: 'Kontakt', href: '/kontakt' },
 		{ name: 'Om Akvilinas', href: '/om-akvilinas' },
 		{ name: 'Bildgalleri', href: '/galleri' },
