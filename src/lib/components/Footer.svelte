@@ -12,7 +12,7 @@
 		<a href='mailto:info@akvlinasfika.se' class={cn(buttonVariants({ variant: 'link' }), 'p-0')} >info@akvlinasfika.se</a>
 		<a href='tel:0703228461' class={cn(buttonVariants({ variant: 'link' }), 'p-0')} >070 - 322 84 61</a>
 	</div>
-	<Divider vertical style='md:hidden' />
+	<Divider vertical class='md:hidden' />
 	<div class="items-center justify-end flex gap-8">
 		<FacebookIcon/>
 		<InstagramIcon/>

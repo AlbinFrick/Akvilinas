@@ -3,9 +3,12 @@
   import type { Product } from '../../types/product';
 	import { Badge } from './ui/badge';
 	import  Text from './Text.svelte';
+  import * as Dialog from "$lib/components/ui/dialog";
 
   export let product: Product;
 </script>
+<Dialog.Root>
+<Dialog.Trigger>
 <div
   class="flex shadow flex-col justify-between gap-6 bg-white rounded-2xl pb-6"
 >
@@ -38,7 +41,26 @@
         kr
       </p>
       <h3 class="text-lg">Beskrivning:</h3>	
-      <Text style='line-clamp-3'>{product.description}</Text>
+      <Text class='line-clamp-3'>{product.description}</Text>
     </div>
   </div>
 </div>
+
+</Dialog.Trigger>
+  <Dialog.Content>
+      <h2>{product.name}</h2>
+      <p>
+        {#each product.price as price, index}
+          <span class="font-bold"
+            >{price}
+            {#if index !== product.price.length - 1}
+              {' - '}
+            {/if}</span
+          >
+        {/each}
+        kr
+      </p>
+      <h3 class="text-lg">Beskrivning:</h3>	
+      <Text class='line-clamp-3'>{product.description}</Text>
+  </Dialog.Content>
+</Dialog.Root>
