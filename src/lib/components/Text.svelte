@@ -1,3 +1,3 @@
-<p class="font-arapey text-lg py-4">
+<p class="font-arapey text-lg ">
 	<slot />
 </p>
