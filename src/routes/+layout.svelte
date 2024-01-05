@@ -3,6 +3,7 @@
 	import '@fontsource/arapey';
 	import '@fontsource-variable/playfair-display';
 	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -17,6 +18,7 @@
 		<slot />
 	</main>
 </div>
+<Footer />
 
 <style>
 	:global(body) {
