@@ -5,11 +5,11 @@
 	import { Button } from '$lib/components/ui/button';
 
 	const links = [
-		{ name: 'Kontakt', href: '/kontakt' },
-		{ name: 'Om Akvilinas', href: '/om-akvilinas' },
+		{ name: 'Sortiment', href: '/sortiment' },
 		{ name: 'Bildgalleri', href: '/galleri' },
-		{ name: 'Sortiment', href: '/sortiment' }
+		{ name: 'Om Akvilinas', href: '/om-akvilinas' }
 	];
+
 </script>
 
 <header class="w-full flex items-center px-4 md:px-8 py-6 h-16 justify-between">
