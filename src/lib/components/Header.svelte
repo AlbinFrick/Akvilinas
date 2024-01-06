@@ -35,8 +35,8 @@
 			</Button>
 		</Sheet.Trigger>
 		<Sheet.Content side="right">
-			<nav>
-				<ul class="flex flex-col">
+			<nav class="mt-6">
+				<ul class="flex flex-col gap-3">
 					{#each links as link}
 						<li>
 							<Sheet.Close>
