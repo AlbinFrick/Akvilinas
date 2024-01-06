@@ -1,5 +1,8 @@
 <script lang="ts">
 	import ImageGrid from '$lib/components/ImageGrid.svelte';
+	import { buttonVariants } from '$lib/components/ui/button';
+	import { Contact } from '$lib/data';
+	import { cn } from '$lib/utils';
 </script>
 
 <div class="mx-auto max-w-7xl mt-6 lg:mt-11">
@@ -14,10 +17,11 @@
 				finns i Lycksele med möjlighet till leverans till orter runtomkring. Välkommen med din
 				beställning!
 			</p>
-			<!-- <div class="mt-10 flex items-center gap-x-6">
-				<!-- <a href="/kontakt" class={cn(buttonVariants({variant: 'secondary', size: 'lg'}), 'text-xl text-white')} >Ta kontakt!</a> 
-			</div>-->
+			<div class="w-full text-center">
+				 <a href={`mailto:${Contact.Email}`} class={cn(buttonVariants({variant: 'link', size:'lg'}), 'text-2xl')} >{Contact.Email}</a> 
+				</div>
 		</div>
+
 		<ImageGrid />
 	</div>
 </div>

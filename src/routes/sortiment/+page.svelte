@@ -1,7 +1,7 @@
 <script>
-	import { Badge } from '$lib/components/ui/badge';
-	import { Button } from '$lib/components/ui/button';
-	import { urlFor } from '$lib/sanity';
+	import Product from '$lib/components/Product.svelte';
+	import Text from '$lib/components/Text.svelte';
+	import { Contact } from '$lib/data';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -11,50 +11,25 @@
 <section class="px-6 prose-h1:mb-3">
 	<h1 class="mt-8">Mitt Sortiment</h1>
 	<p class="max-w-prose">
-		Jag har ett standard sortiment som man alltid kan betälla. Dessa är det som finns här under.
+		Jag har ett standard sortiment som man alltid kan beställa. Dessa är det som finns här under.
 		Vill du ha något lite extra kan du göra en special beställning i formuläret längst ner på sidan.
 		Funderar du över något är det bara att kontaka mig!
 	</p>
+
 </section>
+
 <section
 	class="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] p-6 gap-6 prose-h2:my-0 prose-img:my-0 prose-p:my-0"
 >
 	{#each products as product}
-		<div
-			class="flex shadow flex-col justify-between gap-6 bg-white rounded-2xl pb-6 max-w-[18.75rem]"
-		>
-			<div class="flex flex-col gap-4">
-				<div class="relative">
-					<img
-						class="rounded-t-xl w-full aspect-[4/3] object-cover"
-						src={urlFor(product.image).url()}
-						alt={product.name}
-					/>
-					{#if product.allergens && product.allergens.length > 0}
-						<div class="absolute right-3 bottom-3 flex gap-4">
-							{#each product.allergens as allergen}
-								<Badge variant="secondary" class={allergen.color}>{allergen.name}</Badge>
-							{/each}
-						</div>
-					{/if}
-				</div>
-				<div class="px-6">
-					<h2>{product.name}</h2>
-					<p>
-						{#each product.price as price, index}
-							<span class="font-bold"
-								>{price}
-								{#if index !== product.price.length - 1}
-									{' - '}
-								{/if}</span
-							>
-						{/each}
-						kr
-					</p>
-					<p>{product.description}</p>
-				</div>
-			</div>
-			<Button class="w-min self-center justify-self-end mt-2">Lägg till</Button>
-		</div>
+		<Product {product} />
 	{/each}
+</section>
+<section class='px-6 pb-6'>
+	<h2 class="mt-8">Göra en beställning</h2>
+	<Text class='max-w-3xl'>För att göra en besätllning så är det bara att ta kontakt med mig via epost. Skriv gärna vilken tårta du vill beställa i ämnesraden i mailet. Om du är intresserad av att göra en specialbeställning skriv då "Speciallbeställning" som ämnes rad. Är det något annat du funderar över gå det också bra att skriva på mail eller slå en signal</Text>	
+	<div class='text-xl space-x-6'>
+		<a href={`mailto:${Contact.Email}`}>{Contact.Email}</a>
+		<a href={`tel:${Contact.Phone}`}>{Contact.Phone}</a>
+	</div>
 </section>
