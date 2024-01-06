@@ -17,10 +17,10 @@
 				finns i Lycksele med möjlighet till leverans till orter runtomkring. Välkommen med din
 				beställning!
 			</p>
-			<div class="w-full text-center">
+			<div class="w-full text-center md:text-start">
 				<a
 					href={`mailto:${Contact.Email}`}
-					class={cn(buttonVariants({ variant: 'link', size: 'lg' }), 'text-2xl')}>{Contact.Email}</a
+					class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}>{Contact.Email}</a
 				>
 			</div>
 		</div>
