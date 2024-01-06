@@ -18,8 +18,11 @@
 				beställning!
 			</p>
 			<div class="w-full text-center">
-				 <a href={`mailto:${Contact.Email}`} class={cn(buttonVariants({variant: 'link', size:'lg'}), 'text-2xl')} >{Contact.Email}</a> 
-				</div>
+				<a
+					href={`mailto:${Contact.Email}`}
+					class={cn(buttonVariants({ variant: 'link', size: 'lg' }), 'text-2xl')}>{Contact.Email}</a
+				>
+			</div>
 		</div>
 
 		<ImageGrid />

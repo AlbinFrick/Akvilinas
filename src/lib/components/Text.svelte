@@ -1,5 +1,5 @@
-<script lang='ts'>
-	import { cn } from "$lib/utils";
+<script lang="ts">
+	import { cn } from '$lib/utils';
 
 	export let className: string;
 	export { className as class };
