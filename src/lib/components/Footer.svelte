@@ -17,7 +17,11 @@
 	</div>
 	<Divider vertical class="md:hidden" />
 	<div class="items-center justify-end flex gap-8">
-		<FacebookIcon />
-		<InstagramIcon />
+		<a href="https://www.facebook.com/akvilinasfika" target="_blank">
+			<FacebookIcon />
+		</a>
+		<a href="https://www.instagram.com/akvilinasfika" target="_blank">
+			<InstagramIcon />
+		</a>
 	</div>
 </footer>
