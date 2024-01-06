@@ -79,3 +79,7 @@
 	}
 }
 
+ /* Is needed to maintain gallery layout */
+.svelte-lightbox-thumbnail > * {
+	height: 100% !important;
+}
