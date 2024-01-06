@@ -52,7 +52,7 @@
   </div>
 </div>
 </Dialog.Trigger>
-  <Dialog.Content class='grid grid-cols-[3fr_2fr] max-w-4xl prose prose-h2:font-playfair prose-h2:mt-0 prose-h2:mb-0 prose-h3:mt-0 prose-h3:mb-0 prose-h3:font-playfair '>
+  <Dialog.Content class='grid grid-cols-1 md:grid-cols-[3fr_2fr] max-w-4xl prose prose-h2:font-playfair prose-h2:mt-0 prose-h2:mb-0 prose-h3:mt-0 prose-h3:mb-0 prose-h3:font-playfair '>
     <div>
       <h2 class="text-4xl pb-3">{product.name}</h2>
       <Text class='line-clamp-3'>{product.description}</Text>
@@ -75,7 +75,7 @@
       {/if}
       </div>
       <img
-      class="rounded-xl w-full aspect-video md:aspect-[4/3] object-cover"
+      class="rounded-xl w-full aspect-[4/3] object-cover"
       src={urlFor(product.image).url()}
       alt={product.name}
     />
