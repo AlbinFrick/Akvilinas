@@ -54,7 +54,7 @@
 	>
 		<div>
 			<h2 class="text-4xl pb-3">{product.name}</h2>
-			<Text class="line-clamp-3">{product.description}</Text>
+			<Text>{product.description}</Text>
 			<h3 class="text-lg">Pris:</h3>
 			<Text class="text-2xl font-bold">
 				{#each product.price as price, index}
