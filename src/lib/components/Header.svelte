@@ -37,6 +37,12 @@
 		<Sheet.Content side="right">
 			<nav class="mt-6">
 				<ul class="flex flex-col gap-3">
+						<li>
+							<Sheet.Close>
+								<a href='/' class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}>Hem</a
+								>
+							</Sheet.Close>
+						</li>
 					{#each links as link}
 						<li>
 							<Sheet.Close>
