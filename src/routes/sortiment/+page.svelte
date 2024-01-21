@@ -32,7 +32,7 @@
 		specialbeställning skriv då "Speciallbeställning" som ämnes rad. Är det något annat du funderar
 		över gå det också bra att skriva på mail eller slå en signal</Text
 	>
-	<div class="text-xl space-x-6">
+	<div class="flex flex-wrap text-xl space-x-6">
 		<a href={`mailto:${Contact.Email}`}>{Contact.Email}</a>
 		<a href={`tel:${Contact.Phone}`}>{Contact.Phone}</a>
 	</div>
