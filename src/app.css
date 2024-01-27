@@ -21,11 +21,11 @@
 
 		/* --primary: 0 0% 9%; */
 		/* --primary-foreground: 0 0% 98%; */
-		--primary: 8 71% 86%;
-		--primary-foreground: 8 71% 12%;
+		--primary: 0 52% 62%;
+		--primary-foreground: 0 52% 97%;
 
-		--secondary: 0 0% 96.1%;
-		--secondary-foreground: 0 0% 9%;
+		--secondary: 0 19% 37%;
+		--secondary-foreground: 0 21% 96%;
 
 		--accent: 0 0% 96.1%;
 		--accent-foreground: 0 0% 9%;
@@ -79,7 +79,7 @@
 	}
 }
 
- /* Is needed to maintain gallery layout */
+/* Is needed to maintain gallery layout */
 .svelte-lightbox-thumbnail > * {
 	height: 100% !important;
 }
