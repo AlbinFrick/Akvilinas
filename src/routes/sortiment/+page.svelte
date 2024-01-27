@@ -1,6 +1,5 @@
 <script>
 	import Product from '$lib/components/Product.svelte';
-	import Text from '$lib/components/Text.svelte';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import { Contact } from '$lib/data';
 	import { cn } from '$lib/utils';
@@ -19,7 +18,7 @@
 		veckor innan hämtning. Skicka en beställningsförfrågan till min mail, sms eller i sociala
 		medier.
 	</p>
-	<div class="flex items-center gap-4">
+	<div class="flex flex-col gap-4 md:flex-row md:items-center">
 		<a href={`mailto:${Contact.Email}`} class={cn(buttonVariants({ size: 'sm' }), ' no-underline')}>
 			{Contact.Email}
 		</a>
@@ -29,12 +28,14 @@
 		>
 			{Contact.Phone}
 		</a>
-		<a href="https://www.facebook.com/akvilinasfika" target="_blank">
-			<FacebookIcon />
-		</a>
-		<a href="https://www.instagram.com/akvilinasfika" target="_blank">
-			<InstagramIcon />
-		</a>
+		<div class="mx-auto flex gap-6 md:mx-0">
+			<a href="https://www.facebook.com/akvilinasfika" target="_blank">
+				<FacebookIcon />
+			</a>
+			<a href="https://www.instagram.com/akvilinasfika" target="_blank">
+				<InstagramIcon />
+			</a>
+		</div>
 	</div>
 </section>
 
