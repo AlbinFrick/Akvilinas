@@ -1,4 +1,5 @@
-export enum Contact  {
-  Email = 'info@avilinasfika.se',
-  Phone = '070 - 322 84 61',
+export enum Contact {
+	Email = 'info@akvilinasfika.se',
+	Phone = '070 - 322 84 61'
 }
+
