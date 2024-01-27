@@ -9,7 +9,7 @@
 </script>
 
 <section class="px-6 prose-h1:mb-3">
-	<h1 class="mt-8">Mitt Sortiment</h1>
+	<h1 class="mt-8">Sortiment</h1>
 	<p class="max-w-prose">
 		Jag har ett standardsortiment som man alltid kan beställa. Dessa är det som finns här under.
 		Vill du ha något lite extra kan du göra en specialbeställning i formuläret längst ner på sidan.
