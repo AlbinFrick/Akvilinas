@@ -10,13 +10,16 @@
 		<div class="prose-h1:mb-2 w-full max-w-xl lg:shrink-0 xl:max-w-2xl lg:mt-32 mb-9 mt-4">
 			<h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">Akvilinas fika</h1>
 			<p
-				class="relative font-arapey mt-6 text-lg md:text-2xl leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
+				class="relative font-arapey mt-6 text-lg md:text-2xl mb-3 leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
 			>
-				Välkommen till Akvilinas Fika! Här kan du beställa en tårta skräddarsydd efter dina
-				önskemål. Vi bakar bland annat moussetårtor, figurtårtor och våningstårtor. Vår tårtverkstad
-				finns i Lycksele med möjlighet till leverans till orter runtomkring. Välkommen med din
-				beställning!
+        Välkommen till Akvilinas Fika! Vi skräddarsyr tårtor efter dina önskemål. Du kan också välja en tårta ur vårt sortiment. Akvilinas Fika är en tårtverkstad belägen i centrala Lycksele, endast avsedd för avhämtning eller leverans.
 			</p>
+      			<p
+				class="relative font-arapey mt-3 text-lg md:text-2xl leading-8 text-gray-600 sm:max-w-md lg:max-w-none"
+			>
+Ta en titt i bildgalleriet för lite inspiration - välkommen med din beställning!
+			</p>
+
 			<div class="w-full text-center md:text-start">
 				<a
 					href={`mailto:${Contact.Email}`}

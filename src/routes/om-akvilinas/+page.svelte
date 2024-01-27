@@ -3,30 +3,28 @@
 	import Text from '$lib/components/Text.svelte';
 </script>
 
-<div class="flex flex-col md:flex-row-reverse gap-6 w-full mt-8 px-6">
-	<div class="snap-y mt-6">
-		<h1 class="scroll-m-20 mb-3 text-4xl font-medium tracking-tight lg:text-5xl">Hilda Akvilina</h1>
+<div class="mt-8 flex w-full flex-col gap-6 px-6 md:flex-row-reverse">
+	<div class="mt-6 snap-y">
+		<h1 class="mb-3 scroll-m-20 text-4xl font-medium tracking-tight lg:text-5xl">Hilda Akvilina</h1>
 		<Text>
-			Jag heter Hilda och det är jag som driver Akvilinas Fika. Startskottet för mitt intresse för
-			bakning började med sammetscupcakes. Jag var så excalterad över hur gott något så enkelt kunde
-			smaka. Ännu mer excalterad var jag när mamma beättade att man kunde jobba med bakning. Sedan
-			2011 har jag experimenterat med recept, utbildat mig till konditor, jobbat på olika kaféer och
-			fått veta att jag har celiaki.
+			Mitt namn är Hilda och det är jag som driver Akvilinas Fika. Akvilinas Fika är en tårtverkstad
+			i centrala Lycksele. Vi skapar tårtor till alla tillfällen - allt från enkla prinsesstårtor
+			med modern design till mer avancerade tematårtor. Här kan du även finna godbitar, cheesecakes,
+			macarones och annat gott.
 		</Text>
-		<Divider style="w-1/2 mx-auto my-3 md:my-4" />
+		<Divider class="mx-auto my-3 w-1/2 md:my-4" />
 		<Text>
-			Celiaki - glutenintolerans i folkmun. Det betyder helt enkelt att jag inte kan äta gluten som
-			finns i vetemjöl och andra mjöler. Jag fick veta att jag hade denna sjukdomen efter min
-			konditoriutbildning. Efter lite sorgetid och förtvivlan så började jag baka utan gluten, och
-			de med gott resultat! Att baka utan gluten är ibland en utmaning, men jag prövar mina recept
-			väl och låter alltid personer som inte har celiaki smaka.
+			Jag fann bakning som ett stort intresse år 2011. Sedan dess har jag utbildat mig till konditor
+			och jobbat på en rad olika kafeér och konditorier. Efter min gymnasieexamen fick jag under en
+			tid försämrad hälsa och det visade sig att jag har den kroniska sjukdomen celiaki. Celiaki -
+			glutenintolerans i folkmun. Det betyder helt enkelt att jag inte kan äta gluten som finns i
+			vetemjöl och andra mjöler. Jag började experimentera med glutenfri bakning - och det med gott
+			resultat! Allt jag bakar gör jag naturligtvis utan gluten. Med en stor drivkraft att alla,
+			glutenintolerant eller icket, ska tycka att det är gott.
 		</Text>
-		<Divider style="w-1/2 mx-auto my-3 md:my-4" />
-		<Text>
-			Jag har tagit beställningar på tårtor mer eller mindre sedan 2014. Nu, nästan 10 år senare
-			bestämde jag under min mammaledighet för att bygga en tårtverkstad i vårt gårdhus. Så med min
-			lilla Astrid på höften och maken vid min sida så kör vi igång. Det ska vara gott att fika!
-		</Text>
+		<Divider class="mx-auto my-3 w-1/2 md:my-4" />
+		<Text>Kul att du har hittat hit! Välkommen med din beställning!</Text>
+		<Text>/Hilda</Text>
 	</div>
 	<img class="scale-95" src="/hilda-and-albin.png" alt="Hilda och Albin skär sin bröllopstårta" />
 </div>
