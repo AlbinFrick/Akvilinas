@@ -1,10 +1,10 @@
-<div class="flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0 not-prose">
+<div class="not-prose flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
 	<div
 		class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
 	>
 		<div class="relative">
 			<img
-				src="/apple-cake.png"
+				src="/nalle.jpg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
@@ -13,10 +13,10 @@
 			/>
 		</div>
 	</div>
-	<div class="mr-auto w-44 flex-none flex flex-col space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+	<div class="mr-auto flex w-44 flex-none flex-col space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
 		<div class="relative">
 			<img
-				src="chocelate-cake.png"
+				src="chocolate.jpg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
@@ -26,7 +26,7 @@
 		</div>
 		<div class="relative">
 			<img
-				src="hilda-with-cake.png"
+				src="hilda-with-cake.jpg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
@@ -38,7 +38,7 @@
 	<div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
 		<div class="relative">
 			<img
-				src="pink-cake.png"
+				src="green-nalle.jpg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
@@ -48,7 +48,7 @@
 		</div>
 		<div class="relative">
 			<img
-				src="wedding-cake.png"
+				src="lemon.jpg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
