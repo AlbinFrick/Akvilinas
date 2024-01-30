@@ -6,17 +6,17 @@
 	import { Contact } from '$lib/data';
 </script>
 
-<footer class="flex gap-4 justify-between px-12 py-8 mt-4">
-	<div class="flex flex-col items-start not-prose md:flex-row gap-1 md:gap-12">
-		<a href={`mailto:${Contact.Email}`} class={cn(buttonVariants({ variant: 'link' }), 'p-0')}
-			>{Contact.Email}</a
+<footer class="mt-4 flex justify-between gap-4 px-12 py-8">
+	<div class="not-prose flex flex-col items-start gap-1 md:flex-row md:gap-12">
+		<a href={`mailto:${Contact.email}`} class={cn(buttonVariants({ variant: 'link' }), 'p-0')}
+			>{Contact.email}</a
 		>
-		<a href={`tel:${Contact.Phone}`} class={cn(buttonVariants({ variant: 'link' }), 'p-0')}
-			>{Contact.Phone}</a
+		<a href={`tel:${Contact.phone}`} class={cn(buttonVariants({ variant: 'link' }), 'p-0')}
+			>{Contact.phone}</a
 		>
 	</div>
 	<Divider vertical class="md:hidden" />
-	<div class="items-center justify-end flex gap-8">
+	<div class="flex items-center justify-end gap-8">
 		<a href="https://www.facebook.com/akvilinasfika" target="_blank">
 			<FacebookIcon />
 		</a>

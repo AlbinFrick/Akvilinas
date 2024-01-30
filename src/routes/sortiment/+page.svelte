@@ -19,14 +19,14 @@
 		medier.
 	</p>
 	<div class="flex flex-col gap-4 md:flex-row md:items-center">
-		<a href={`mailto:${Contact.Email}`} class={cn(buttonVariants({ size: 'sm' }), ' no-underline')}>
-			{Contact.Email}
+		<a href={Contact.emailLink} class={cn(buttonVariants({ size: 'sm' }), ' no-underline')}>
+			{Contact.email}
 		</a>
 		<a
-			href={`tel:${Contact.Phone}`}
+			href={`tel:${Contact.phone}`}
 			class={cn(buttonVariants({ size: 'sm', variant: 'secondary' }), 'no-underline')}
 		>
-			{Contact.Phone}
+			{Contact.phone}
 		</a>
 		<div class="mx-auto flex gap-6 md:mx-0">
 			<a href="https://www.facebook.com/akvilinasfika" target="_blank">
