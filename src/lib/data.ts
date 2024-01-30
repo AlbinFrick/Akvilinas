@@ -4,7 +4,7 @@ const body = `Hej!
 
 Jag skulle vilja göra en beställning. 
 
-[B]Bold[/B]
+
 
 Önskat datum:
 
