@@ -12,7 +12,7 @@
 			med modern design till mer avancerade tematårtor. Här kan du även finna godbitar, cheesecakes,
 			macarones och annat gott.
 		</Text>
-		<Divider class="mx-auto my-3 w-1/2 md:my-4" />
+		<Divider class="my-3 w-12 md:my-4" />
 		<Text>
 			Jag fann bakning som ett stort intresse år 2011. Sedan dess har jag utbildat mig till konditor
 			och jobbat på en rad olika kafeér och konditorier. Efter min gymnasieexamen fick jag under en
@@ -22,7 +22,7 @@
 			resultat! Allt jag bakar gör jag naturligtvis utan gluten. Med en stor drivkraft att alla,
 			glutenintolerant eller icket, ska tycka att det är gott.
 		</Text>
-		<Divider class="mx-auto my-3 w-1/2 md:my-4" />
+		<Divider class="my-3 w-12 md:my-4" />
 		<Text>Kul att du har hittat hit! Välkommen med din beställning!</Text>
 		<Text>/Hilda</Text>
 	</div>
