@@ -41,6 +41,7 @@
 		"@fontsource/arapey": "^5.0.8",
 		"@sanity/client": "^6.4.12",
 		"@sanity/image-url": "^1.0.2",
+		"@sveltejs/vite-plugin-svelte": "^3.0.2",
 		"bits-ui": "^0.15.1",
 		"clsx": "^2.0.0",
 		"lucide-svelte": "^0.284.0",
