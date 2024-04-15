@@ -38,3 +38,7 @@ export function urlFor(source: SanityImageSource) {
 export async function getProducts() {
 	return await client.fetch(`*[_type == 'product']`);
 }
+
+export async function getThemePage() {
+	return await client.fetch(`*[_type == 'themePage']`);
+}
