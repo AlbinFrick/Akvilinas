@@ -8,16 +8,16 @@
 	export let product: Product;
 </script>
 
-<div class="flex shadow flex-col justify-between gap-6 bg-white rounded-2xl pb-6 h-full">
+<div class="flex h-full flex-col justify-between gap-6 rounded-2xl bg-white pb-6 shadow">
 	<div class="flex flex-col gap-4">
 		<div class="relative">
 			<img
-				class="rounded-t-xl w-full aspect-video md:aspect-[4/3] object-cover"
+				class="aspect-video w-full rounded-t-xl object-cover md:aspect-[4/3]"
 				src={urlFor(product.image).url()}
 				alt={product.name}
 			/>
 			{#if product.allergens && product.allergens.length > 0}
-				<div class="absolute right-3 bottom-3 flex gap-4">
+				<div class="absolute bottom-3 right-3 flex gap-4">
 					{#each product.allergens as allergen}
 						<Badge variant="secondary">{capitalizeFirstLetter(allergen)}</Badge>
 					{/each}
