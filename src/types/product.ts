@@ -6,5 +6,6 @@ export interface Product {
 	contents: Array<string>;
 	image: SanityImage;
 	allergens: Array<string>;
+	available: boolean;
 }
 // price: Array<{ pieces: '6-8' | '10-12'; amount: number }>;
