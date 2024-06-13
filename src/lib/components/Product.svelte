@@ -18,13 +18,13 @@
 </script>
 
 {#if !product.available}
-	<div class="relative">
+	<div class="relative flex">
 		<p
 			class="absolute left-1/2 top-1/3 z-10 inline -translate-x-1/2 -translate-y-1/2 -rotate-[20deg] whitespace-nowrap rounded-md bg-primary px-3 py-2 text-xl text-primary-foreground"
 		>
 			Går ej att beställa för tillfället
 		</p>
-		<div class="opacity-40 sm:absolute sm:bottom-0 sm:top-0">
+		<div class="opacity-40 flex-1">
 			<ProductCard {product} />
 		</div>
 	</div>
