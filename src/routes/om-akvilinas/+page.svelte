@@ -7,7 +7,7 @@
 	<div class="mt-6 snap-y">
 		<h1 class="mb-3 scroll-m-20 text-4xl font-medium tracking-tight lg:text-5xl">Hilda Akvilina</h1>
 		<Text>
-			Mitt namn är Hilda och det är jag som driver Akvilinas Fika. Akvilinas Fika är en tårtstudio i centrala Lycksele. Vi skapar specialgjorda tematårtor till alla tillfällen.
+			Mitt namn är Hilda och det är jag som driver Akvilinas Fika. Akvilinas Fika är en tårtstudio i centrala Lycksele. Vi skapar skräddarsydda tematårtor till alla tillfällen.
 		</Text>
 		<Divider class="my-3 w-12 md:my-4" />
 		<Text>
