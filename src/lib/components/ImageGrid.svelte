@@ -16,7 +16,7 @@
 	<div class="mr-auto flex w-44 flex-none flex-col space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
 		<div class="relative">
 			<img
-				src="chocolate.jpg"
+				src="wedding-cake.jpeg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
@@ -48,7 +48,7 @@
 		</div>
 		<div class="relative">
 			<img
-				src="lemon.jpg"
+				src="flower-cake.jpeg"
 				alt=""
 				class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
 			/>
