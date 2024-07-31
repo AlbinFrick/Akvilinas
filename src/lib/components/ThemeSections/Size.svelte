@@ -16,7 +16,7 @@
 	<div class="mt-16 grid grid-cols-2 justify-items-center gap-y-6">
 		<div class="flex flex-col items-center gap-2">
 			<div
-				class=" grid size-24 place-items-center rounded-full border-2 border-primary text-3xl font-bold"
+				class="grid size-24 place-items-center rounded-full border-2 border-primary text-3xl font-bold"
 			>
 				<span>8</span>
 			</div>
@@ -32,13 +32,14 @@
 			<p class="m-0 text-3xl font-medium">960kr</p>
 		</div>
 
-		<div class="flex flex-col gap-6 sm:flex-row">
+		<div class="hidden flex-col gap-6 sm:flex-row md:flex">
 			<EightPiece />
 			<TenPiece />
 		</div>
-		<div class="flex flex-col gap-6 sm:flex-row">
+
+		<div class="hidden flex-col gap-6 sm:flex-row md:flex">
 			<TwelvePiece />
-			<FifteenPiece size="120" />
+			<FifteenPiece />
 		</div>
 	</div>
 </section>
