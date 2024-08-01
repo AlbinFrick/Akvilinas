@@ -5,7 +5,7 @@
 	import TwelvePiece from './TwelvePiece.svelte';
 </script>
 
-<section id="size">
+<section id="size" class="border border-x-0 border-y-2 pb-10">
 	<h2>Storlekar</h2>
 	<p>
 		Tema tårtor kommer i två storlekar 8 eller 12 bitar. Detta är ett ungefärligt mått på hur stora
@@ -18,7 +18,7 @@
 			<div
 				class="grid size-24 place-items-center rounded-full border-2 border-primary text-3xl font-bold"
 			>
-				<span>8</span>
+				<span class="text-4xl">8</span>
 			</div>
 			<p class="m-0 text-3xl font-medium">640kr</p>
 		</div>
