@@ -1,3 +1,7 @@
+<script>
+	import FigureCard from './FigureCard.svelte';
+</script>
+
 <section id="decoration" class="border border-x-0 border-y-2 pb-10">
 	<h2>Dekoration</h2>
 	<p>
@@ -19,25 +23,16 @@
 	</p>
 	<h4>Figurer</h4>
 	<p>Figurer är det som är pricken är över i:et på mina tema tårtor</p>
-	<div class="flex flex-col justify-between *:flex-1 md:flex-row">
-		<div>
-			<h5 class="text-center font-bold">Enkel</h5>
-			<p>
-				Dessa är figurer som inte tar väldigt lång tid att göra att som inte heller nödvändigtvis
-				behöver se ut som något i verkligheten
-			</p>
-			<p>Fast pris på <span class="font-bold">400kr</span></p>
-			<p class="text-center font-bold">Bilder</p>
-		</div>
-		<div>
-			<h5 class="text-center font-bold">Avanserad</h5>
-			<p>
-				Dessa är figurer som inte tar väldigt lång tid att göra att som inte heller nödvändigtvis
-				behöver se ut som något i verkligheten
-			</p>
-			<p>Rörligt pris utifrån överenskommelse</p>
-			<p class="text-center font-bold">Bilder</p>
-		</div>
+	<div class="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+		<FigureCard
+			title="Enkel"
+			description="Dessa är figurer som inte tar väldigt lång tid att göra att som inte heller nödvändigtvis behöver se ut som något i verkligheten"
+			price={400}
+		/>
+		<FigureCard
+			title="Avancerad"
+			description="Dessa är figurer som inte tar väldigt lång tid att göra att som inte heller nödvändigtvis behöver se ut som något i verkligheten"
+		/>
 	</div>
 	<h4>Övriga dekorationer</h4>
 	<p>
