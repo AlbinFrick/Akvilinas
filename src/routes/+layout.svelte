@@ -4,6 +4,11 @@
 	import '@fontsource-variable/playfair-display';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <svelte:head>
@@ -13,8 +18,8 @@
 
 <Header />
 <!-- This div is it to make the image grid flow outside of the screen -->
-<div class="overflow-hidden min-h-[calc(100vh-120px-64px)]">
-	<main class="w-full max-w-7xl mx-auto font-playfair prose">
+<div class="min-h-[calc(100vh-120px-64px)] overflow-hidden">
+	<main class="prose mx-auto w-full max-w-7xl font-playfair">
 		<slot />
 	</main>
 </div>
