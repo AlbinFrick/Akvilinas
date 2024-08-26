@@ -4,18 +4,39 @@
 
 <section id="decoration" class="border border-x-0 border-y-2 pb-10">
 	<h2>Dekoration</h2>
-	<p>
-		På alla tematårtor finns det något jag kallar basdekorationer. Det är dekorationer som fyller ut
-		tårtans dekoration och binder ihop hela kalaset för att det ska bli en fröjd för ögat.
-	</p>
-	<p>Det är till exempel</p>
-	<ul>
-		<li>blommor</li>
-		<li>bin</li>
-		<li>häst</li>
-	</ul>
-	<p>Dessa dekorationer har ingen extra kostnad.</p>
-	<p class="text-center font-bold">Bilder</p>
+  <div class="flex flex-col md:flex-row justify-between rounded-xl overflow-clip">
+    <div class="bg-white p-4 md:p-6">
+      <p class="m-0">
+        På alla tematårtor finns det något jag kallar basdekorationer. Det är dekorationer som fyller ut
+        tårtans dekoration och binder ihop hela kalaset för att det ska bli en fröjd för ögat.
+      </p>
+      <p>Det är till exempel</p>
+      <ul>
+        <li>blommor</li>
+        <li>bin</li>
+        <li>häst</li>
+      </ul>
+      <p>Dessa dekorationer har ingen extra kostnad.</p>
+    </div>
+    <div class='grid grid-cols-2  *:object-cover *:m-0  *:aspect-square md:*:aspect-[3/4] md:w-2/5'>
+        <img
+          src="chocolate.jpg"
+          alt=""
+        />
+        <img
+          src="hooja.jpeg"
+          alt=""
+        />
+        <img
+          src="lemon.jpg"
+          alt=""
+        />
+        <img
+          src="nalle.jpg"
+          alt=""
+        />
+    </div>
+  </div>
 	<h3>Tillägg</h3>
 	<p>
 		Man kan välja att lägga till extra dekorationer på sin tårta för att få sin tårta extra
