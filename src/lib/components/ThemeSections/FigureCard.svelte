@@ -4,32 +4,22 @@
 	export let price: number | undefined = undefined;
 </script>
 
-<div class="rounded-xl overflow-clip bg-white">
-  <div class='grid grid-cols-2 *:aspect-[4/3] *:object-cover *:m-0 '>
-			<img
-				src="chocolate.jpg"
-				alt=""
-			/>
-			<img
-				src="hooja.jpeg"
-				alt=""
-			/>
-			<img
-				src="lemon.jpg"
-				alt=""
-			/>
-			<img
-				src="nalle.jpg"
-				alt=""
-			/>
-  </div>
-  <div class="p-4 sm:p-8 ">
-    <h5 class="font-bold text-2xl">{title}</h5>
-    <p>{description}</p>
-    {#if price}
-      <p class='text-2xl md:text-3xl m-0 mb-2 font-bold text-center'>{price}<span class="text-base">kr</span></p>
-    {:else}
-      <p class='text-lg italic text-center'>Rörligt pris utifrån överenskommelse</p>
-    {/if}
-  </div>
+<div class="overflow-clip rounded-xl bg-white">
+	<div class="grid grid-cols-2 *:m-0 *:aspect-[4/3] *:object-cover">
+		<img src="chocolate.jpg" alt="" />
+		<img src="hooja.jpeg" alt="" />
+		<img src="lemon.jpg" alt="" />
+		<img src="nalle.jpg" alt="" />
+	</div>
+	<div class="p-4 sm:p-8">
+		<h5 class="text-2xl font-bold">{title}</h5>
+		<p class="text-lg">{description}</p>
+		{#if price}
+			<p class="m-0 mb-2 text-center text-2xl font-bold md:text-3xl">
+				{price}<span class="text-base">kr</span>
+			</p>
+		{:else}
+			<p class="text-center text-lg italic">Pris utifrån överenskommelse</p>
+		{/if}
+	</div>
 </div>
