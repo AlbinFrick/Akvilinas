@@ -24,7 +24,7 @@
 		>
 			Går ej att beställa för tillfället
 		</p>
-		<div class="opacity-40 flex-1">
+		<div class="flex-1 opacity-40">
 			<ProductCard {product} />
 		</div>
 	</div>

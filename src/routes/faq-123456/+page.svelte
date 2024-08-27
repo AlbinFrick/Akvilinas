@@ -11,7 +11,7 @@
 
 <ul>
 	{#each data.images as image}
-		<li class="font-bold mt-32">
+		<li class="mt-32 font-bold">
 			<img src={image.poster.url} alt="film bild" />
 		</li>
 	{/each}

@@ -13,8 +13,8 @@
 <section class="px-6 prose-h1:mb-3">
 	<h1 class="mt-8">Sortiment</h1>
 	<p class="max-w-prose">
-    Skicka in din bokningsförfrågan senast två veckor innan önskat datum att hämta. 
-    Det gör du enklast via mail, sms eller i sociala medier.
+		Skicka in din bokningsförfrågan senast två veckor innan önskat datum att hämta. Det gör du
+		enklast via mail, sms eller i sociala medier.
 	</p>
 	<div class="flex flex-col gap-4 md:flex-row md:items-center">
 		<a href={Contact.emailLink} class={cn(buttonVariants({ size: 'sm' }), ' no-underline')}>

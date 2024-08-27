@@ -12,7 +12,9 @@
 			<p
 				class="relative mb-3 mt-6 font-arapey text-lg leading-8 text-gray-600 sm:max-w-md md:text-2xl lg:max-w-none"
 			>
-        Välkommen till Akvilinas Fika! Vi skräddarsyr tårtor efter dina önskemål till livets alla firanden! Akvilinas Fika är en tårtstudio belägen i centrala Lycksele, endast avsedd för avhämtning eller leverans.
+				Välkommen till Akvilinas Fika! Vi skräddarsyr tårtor efter dina önskemål till livets alla
+				firanden! Akvilinas Fika är en tårtstudio belägen i centrala Lycksele, endast avsedd för
+				avhämtning eller leverans.
 			</p>
 			<p
 				class="relative mt-3 font-arapey text-lg leading-8 text-gray-600 sm:max-w-md md:text-2xl lg:max-w-none"
