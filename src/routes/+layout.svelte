@@ -5,6 +5,11 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
+	// Speed insights
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	injectSpeedInsights();
+
+	// Analytics
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 
