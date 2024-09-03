@@ -27,33 +27,36 @@
 			{/each}
 		</ul>
 	</nav>
-	<Sheet.Root>
-		<Sheet.Trigger asChild let:builder>
-			<Button builders={[builder]} variant="ghost" class="flex flex-col gap-1.5 md:hidden">
-				<span class="h-[1.5px] w-8 bg-black" />
-				<span class="h-[1.5px] w-8 bg-black" />
-				<span class="h-[1.5px] w-8 bg-black" />
-			</Button>
-		</Sheet.Trigger>
-		<Sheet.Content side="right">
-			<nav class="mt-6">
-				<ul class="flex flex-col gap-3">
-					<li>
-						<Sheet.Close>
-							<a href="/" class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}>Hem</a>
-						</Sheet.Close>
-					</li>
-					{#each links as link}
+
+	<div class="md:hidden">
+		<Sheet.Root>
+			<Sheet.Trigger asChild let:builder>
+				<Button builders={[builder]} variant="ghost" class="flex flex-col gap-1.5">
+					<span class="h-[1.5px] w-8 bg-black" />
+					<span class="h-[1.5px] w-8 bg-black" />
+					<span class="h-[1.5px] w-8 bg-black" />
+				</Button>
+			</Sheet.Trigger>
+			<Sheet.Content side="right">
+				<nav class="mt-6">
+					<ul class="flex flex-col gap-3">
 						<li>
 							<Sheet.Close>
-								<a href={link.href} class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}
-									>{link.name}</a
-								>
+								<a href="/" class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}>Hem</a>
 							</Sheet.Close>
 						</li>
-					{/each}
-				</ul>
-			</nav>
-		</Sheet.Content>
-	</Sheet.Root>
+						{#each links as link}
+							<li>
+								<Sheet.Close>
+									<a href={link.href} class={cn(buttonVariants({ variant: 'link' }), 'text-xl')}
+										>{link.name}</a
+									>
+								</Sheet.Close>
+							</li>
+						{/each}
+					</ul>
+				</nav>
+			</Sheet.Content>
+		</Sheet.Root>
+	</div>
 </header>
