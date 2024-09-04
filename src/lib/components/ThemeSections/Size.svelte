@@ -1,11 +1,12 @@
 <script>
 	import EightPiece from './EightPiece.svelte';
 	import FifteenPiece from './FifteenPiece.svelte';
+	import Section from './Section.svelte';
 	import TenPiece from './TenPiece.svelte';
 	import TwelvePiece from './TwelvePiece.svelte';
 </script>
 
-<section id="size" class="border border-x-0 border-y-2 pb-10">
+<Section id="size">
 	<h2>Storlekar</h2>
 	<p>
 		Tema tårtor kommer i två storlekar 8 eller 12 bitar. Detta är ett ungefärligt mått på hur stora
@@ -42,4 +43,4 @@
 			<FifteenPiece />
 		</div>
 	</div>
-</section>
+</Section>
