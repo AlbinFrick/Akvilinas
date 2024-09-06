@@ -6,7 +6,7 @@
 	import TwelvePiece from './TwelvePiece.svelte';
 </script>
 
-<Section id="size">
+<Section id="size" class="bg-white pt-4">
 	<h2>Storlekar</h2>
 	<p>
 		Tema tårtor kommer i två storlekar 8 eller 12 bitar. Detta är ett ungefärligt mått på hur stora

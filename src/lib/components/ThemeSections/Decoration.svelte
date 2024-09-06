@@ -1,8 +1,9 @@
 <script>
 	import FigureCard from './FigureCard.svelte';
+	import Section from './Section.svelte';
 </script>
 
-<section id="decoration" class="space-y-6 border border-x-0 border-y-2 pb-10">
+<Section id="decoration" class="space-y-6">
 	<h2>Dekoration</h2>
 	<div class="flex flex-col justify-between overflow-clip rounded-xl md:flex-row">
 		<div class="bg-white p-4 md:p-6">
@@ -61,4 +62,4 @@
 			<img src="nalle.jpg" alt="" />
 		</div>
 	</div>
-</section>
+</Section>
