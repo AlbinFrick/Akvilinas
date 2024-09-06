@@ -13,7 +13,11 @@
 	const themePage = page[0] as ThemePage;
 </script>
 
-<Section id="hero" class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-20 ">
+<Section
+	id="hero"
+	divider="wave"
+	class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-20 "
+>
 	<div class="">
 		<h1 class="mb-4 text-5xl text-gray-800">{themePage.title}</h1>
 		<p class="text-lg text-gray-700">{themePage.description}</p>
