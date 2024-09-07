@@ -18,9 +18,9 @@
 	divider="wave"
 	class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-20 "
 >
-	<div class="">
-		<h1 class="mb-4 text-5xl text-gray-800">{themePage.title}</h1>
-		<p class="text-lg text-gray-700">{themePage.description}</p>
+	<div>
+		<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
+		<p class="text-lg text-gray-600">{themePage.description}</p>
 	</div>
 	<img
 		class="mb-0 mt-0 aspect-square max-h-full rounded-3xl object-cover object-top"
