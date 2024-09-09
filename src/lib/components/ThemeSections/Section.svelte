@@ -1,14 +1,17 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
-	import Divider from '../Divider.svelte';
 
 	export let id: string;
 	let className: string | undefined = undefined;
 	export { className as class };
-	export let divider: 'wave' | undefined = undefined;
+	export let divider: 'wave' | 'angle' | undefined = undefined;
 </script>
 
-<section {id} class={cn('relative p-6 pb-16', className)}>
+<section
+	{id}
+	class:angle-clip-path={divider === 'angle'}
+	class={cn('relative px-6 py-16', className)}
+>
 	{#if divider === 'wave'}
 		<div class="custom-shape-divider-bottom-1725664064">
 			<svg
@@ -64,5 +67,9 @@
 
 	.custom-shape-divider-bottom-1725664064 .shape-fill {
 		fill: #fff;
+	}
+
+	.angle-clip-path {
+		clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
 	}
 </style>

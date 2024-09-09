@@ -1,9 +1,5 @@
 <script>
-	import EightPiece from './EightPiece.svelte';
-	import FifteenPiece from './FifteenPiece.svelte';
 	import Section from './Section.svelte';
-	import TenPiece from './TenPiece.svelte';
-	import TwelvePiece from './TwelvePiece.svelte';
 </script>
 
 <Section id="size" class="bg-white pt-4">
@@ -17,7 +13,7 @@
 	<div class="mt-16 grid grid-cols-2 justify-items-center gap-y-6">
 		<div class="flex flex-col items-center gap-2">
 			<div
-				class="grid size-24 place-items-center rounded-full border-2 border-primary text-3xl font-bold"
+				class="grid size-28 place-items-center rounded-full border-2 border-primary text-3xl font-bold"
 			>
 				<span class="text-4xl">8</span>
 			</div>
@@ -26,21 +22,11 @@
 
 		<div class="flex flex-col items-center gap-2">
 			<div
-				class="m-0 grid size-24 place-items-center rounded-full border-2 border-primary text-5xl font-bold"
+				class="m-0 grid size-28 place-items-center rounded-full border-2 border-primary text-5xl font-bold"
 			>
 				<span class="-mt-3">12</span>
 			</div>
 			<p class="m-0 text-3xl font-medium">960kr</p>
-		</div>
-
-		<div class="hidden flex-col gap-6 sm:flex-row md:flex">
-			<EightPiece />
-			<TenPiece />
-		</div>
-
-		<div class="hidden flex-col gap-6 sm:flex-row md:flex">
-			<TwelvePiece />
-			<FifteenPiece />
 		</div>
 	</div>
 </Section>

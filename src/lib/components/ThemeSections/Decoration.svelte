@@ -3,10 +3,10 @@
 	import Section from './Section.svelte';
 </script>
 
-<Section id="decoration" class="space-y-6">
-	<h2>Dekoration</h2>
+<Section divider="angle" id="decoration" class="space-y-6 bg-red-100">
+	<h2 class="mt-0">Dekoration</h2>
 	<div class="flex flex-col justify-between overflow-clip rounded-xl md:flex-row">
-		<div class="bg-white p-4 md:p-6">
+		<div>
 			<p class="m-0">
 				På alla tematårtor finns det något jag kallar basdekorationer. Det är dekorationer som
 				fyller ut tårtans dekoration och binder ihop hela kalaset för att det ska bli en fröjd för
@@ -20,20 +20,16 @@
 			</ul>
 			<p>Dessa dekorationer har ingen extra kostnad.</p>
 		</div>
-		<div class="grid grid-cols-2 *:m-0 *:aspect-square *:object-cover md:w-2/5 md:*:aspect-[3/4]">
+		<div
+			class="mx-auto grid grid-cols-2 overflow-clip rounded-xl *:m-0 *:aspect-square *:object-cover md:w-1/2"
+		>
 			<img src="chocolate.jpg" alt="" />
 			<img src="hooja.jpeg" alt="" />
 			<img src="lemon.jpg" alt="" />
 			<img src="nalle.jpg" alt="" />
 		</div>
 	</div>
-	<h3>Tillägg</h3>
-	<p>
-		Man kan välja att lägga till extra dekorationer på sin tårta för att få sin tårta extra
-		skräddarsydd efter dina preferenser.
-	</p>
-	<h4>Figurer</h4>
-	<p>Figurer är det som är pricken är över i:et på mina tema tårtor</p>
+	<h3>Figurer</h3>
 	<div class="mx-auto flex max-w-5xl flex-col justify-between gap-4 md:flex-row md:gap-8">
 		<FigureCard
 			title="Enkel"

@@ -13,29 +13,31 @@
 	const themePage = page[0] as ThemePage;
 </script>
 
-<Section
-	id="hero"
-	divider="wave"
-	class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-20 "
->
-	<div>
-		<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
-		<p class="text-lg text-gray-600">{themePage.description}</p>
-	</div>
-	<img
-		class="mb-0 mt-0 aspect-square max-h-full rounded-3xl object-cover object-top"
-		src={urlFor(themePage.image).url()}
-		alt="nallepuh"
-	/>
-</Section>
+<div class="bg-white">
+	<Section
+		id="hero"
+		divider="wave"
+		class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-20 "
+	>
+		<div>
+			<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
+			<p class="text-lg text-gray-600">{themePage.description}</p>
+		</div>
+		<img
+			class="mb-0 mt-0 aspect-square max-h-full rounded-3xl object-cover object-top"
+			src={urlFor(themePage.image).url()}
+			alt="nallepuh"
+		/>
+	</Section>
 
-<Size />
-<Decoration />
-<Flavour {themePage} />
+	<Size />
+	<Decoration />
+	<Flavour {themePage} />
 
-<section class="mt-20 grid place-items-center">
-	<Button size="lg">Beställ</Button>
-</section>
+	<section class="mt-20 grid place-items-center">
+		<Button size="lg">Beställ</Button>
+	</section>
+</div>
 
 <style>
 	:global(body) {
