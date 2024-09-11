@@ -1,24 +1,19 @@
-<script>
+<script lang="ts">
+	import type { SanityImage } from '../../../types/sanity';
+	import type { Decoration } from '../../../types/themePage';
 	import FigureCard from './FigureCard.svelte';
 	import Section from './Section.svelte';
+	import { PortableText, type InputValue } from '@portabletext/svelte';
+
+	export let decoration: Decoration;
+	const decorationDescription = decoration.base.description as unknown as InputValue;
 </script>
 
 <Section divider="angle" id="decoration" class="space-y-6 bg-red-100">
-	<h2 class="mt-0">Dekoration</h2>
+	<h2 class="mt-0">{decoration.title}</h2>
 	<div class="flex flex-col justify-between overflow-clip rounded-xl md:flex-row">
 		<div>
-			<p class="m-0">
-				På alla tematårtor finns det något jag kallar basdekorationer. Det är dekorationer som
-				fyller ut tårtans dekoration och binder ihop hela kalaset för att det ska bli en fröjd för
-				ögat.
-			</p>
-			<p>Det är till exempel</p>
-			<ul>
-				<li>blommor</li>
-				<li>bin</li>
-				<li>häst</li>
-			</ul>
-			<p>Dessa dekorationer har ingen extra kostnad.</p>
+			<PortableText value={decorationDescription} components={{}} />
 		</div>
 		<div
 			class="mx-auto grid grid-cols-2 overflow-clip rounded-xl *:m-0 *:aspect-square *:object-cover md:w-1/2"

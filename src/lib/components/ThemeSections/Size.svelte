@@ -1,14 +1,13 @@
-<script>
+<script lang="ts">
 	import Section from './Section.svelte';
+	import type { Size } from '../../../types/themePage';
+	export let size: Size;
 </script>
 
 <Section id="size" class="bg-white pt-4">
-	<h2>Storlekar</h2>
+	<h2>{size.title}</h2>
 	<p>
-		Tema tårtor kommer i två storlekar 8 eller 12 bitar. Detta är ett ungefärligt mått på hur stora
-		tårtorna är. Tar man mindre bitar går det även att göra tårtorna till 10, respektive 15 bitar.
-		Se illustrationen nedan. För det vi kallar 8 bitars är baspriset 640 kr, med 12 bitar är
-		baspriset 960 kr.
+		{size.description}
 	</p>
 	<div class="mt-16 grid grid-cols-2 justify-items-center gap-y-6">
 		<div class="flex flex-col items-center gap-2">
@@ -17,7 +16,7 @@
 			>
 				<span class="text-4xl">8</span>
 			</div>
-			<p class="m-0 text-3xl font-medium">640kr</p>
+			<p class="m-0 text-3xl font-medium">{size.pricesmall}kr</p>
 		</div>
 
 		<div class="flex flex-col items-center gap-2">
@@ -26,7 +25,7 @@
 			>
 				<span class="-mt-3">12</span>
 			</div>
-			<p class="m-0 text-3xl font-medium">960kr</p>
+			<p class="m-0 text-3xl font-medium">{size.pricebig}kr</p>
 		</div>
 	</div>
 </Section>

@@ -11,6 +11,9 @@
 	export let data;
 	const { page } = data;
 	const themePage = page[0] as ThemePage;
+	const size = themePage.size;
+	const decoration = themePage.decoration;
+	const flavour = themePage.flavour;
 </script>
 
 <div class="bg-white">
@@ -30,8 +33,8 @@
 		/>
 	</Section>
 
-	<Size />
-	<Decoration />
+	<Size {size} />
+	<Decoration {decoration} />
 	<Flavour {themePage} />
 
 	<section class="mt-20 grid place-items-center">
