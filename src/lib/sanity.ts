@@ -1,6 +1,9 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import type { ThemePage } from '../types/themePage';
+import type { Product } from '../types/product';
+import type { Gallery } from '../types/gallery';
 
 const client = createClient({
 	projectId: '4nos8q8u',
@@ -26,7 +29,7 @@ export async function getMovieImages() {
 }
 
 export async function getGallery() {
-	return await client.fetch(`*[_type == 'gallery']`);
+	return (await client.fetch(`*[_type == 'gallery']`)) as Gallery[];
 }
 
 const builder = imageUrlBuilder(client);
@@ -36,9 +39,9 @@ export function urlFor(source: SanityImageSource) {
 }
 
 export async function getProducts() {
-	return await client.fetch(`*[_type == 'product']`);
+	return (await client.fetch(`*[_type == 'product']`)) as Product[];
 }
 
 export async function getThemePage() {
-	return await client.fetch(`*[_type == 'themePage']`);
+	return (await client.fetch(`*[_type == 'themePage']`)) as ThemePage;
 }

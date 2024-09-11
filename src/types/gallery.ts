@@ -1,6 +1,6 @@
 import type { SanityImage } from './sanity';
 
-export interface gallery {
+export interface Gallery {
 	name: string;
 	portraitImageLeft: SanityImage;
 	portraitImageRight: SanityImage;
