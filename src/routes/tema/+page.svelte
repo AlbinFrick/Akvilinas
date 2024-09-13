@@ -6,6 +6,9 @@
 	import { type ThemePage } from '../../types/themePage';
 	import Flavour from '$lib/components/ThemeSections/Flavour.svelte';
 	import Section from '$lib/components/ThemeSections/Section.svelte';
+	import { Contact } from '$lib/data';
+	import { buttonVariants } from '$lib/components/ui/button';
+	import { cn } from '$lib/utils';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -38,7 +41,14 @@
 	<Flavour {themePage} />
 
 	<section class="mt-20 grid place-items-center">
-		<Button size="lg">Beställ</Button>
+		<a
+			aria-label="Beställ via e-post"
+			title="Beställ via e-post"
+			href={Contact.emailLink}
+			class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}
+		>
+			Beställ
+		</a>
 	</section>
 </div>
 
