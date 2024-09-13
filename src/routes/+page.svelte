@@ -22,7 +22,7 @@
 				Ta en titt i bildgalleriet för lite inspiration - välkommen med din beställning!
 			</p>
 
-			<div class="w-full text-center md:text-start">
+			<div class="relative z-10 w-full text-center md:text-start">
 				<a
 					href={`mailto:${Contact.email}`}
 					class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}>{Contact.email}</a
