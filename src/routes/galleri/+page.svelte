@@ -1,5 +1,5 @@
 <script>
-	import { urlFor } from '$lib/sanity';
+	import { getSanityImageURL } from '$lib/sanity';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -13,14 +13,14 @@
 					<div class="h-72 w-full overflow-hidden rounded-xl lg:h-[450px]">
 						<img
 							class="h-full w-full object-cover"
-							src={urlFor(gallery.portraitImageLeft).height(450).width(288).url()}
+							src={getSanityImageURL(gallery.portraitImageLeft).height(450).width(288).url()}
 							alt="images"
 						/>
 					</div>
 					<div class="h-72 w-full overflow-hidden rounded-xl lg:h-[450px]">
 						<img
 							class="h-full w-full object-cover"
-							src={urlFor(gallery.portraitImageRight).height(450).width(288).url()}
+							src={getSanityImageURL(gallery.portraitImageRight).height(450).width(288).url()}
 							alt="images"
 						/>
 					</div>
@@ -28,7 +28,7 @@
 				<div class="h-72 w-full overflow-hidden rounded-xl lg:h-[622px]">
 					<img
 						class="h-full w-full object-cover"
-						src={urlFor(gallery.squareImage).height(622).width(622).url()}
+						src={getSanityImageURL(gallery.squareImage).height(622).width(622).url()}
 						alt="images"
 					/>
 				</div>
@@ -37,7 +37,7 @@
 				<div class="h-96 w-full overflow-hidden rounded-xl lg:h-[764px]">
 					<img
 						class="h-full w-full object-cover"
-						src={urlFor(gallery.bigPortraitImage).height(622).width(764).url()}
+						src={getSanityImageURL(gallery.bigPortraitImage).height(622).width(764).url()}
 						alt="images"
 					/>
 				</div>
@@ -45,7 +45,7 @@
 				<div class="h-52 w-full overflow-hidden rounded-xl lg:h-[308px]">
 					<img
 						class="h-full w-full object-cover"
-						src={urlFor(gallery.landscapeImage).width(622).height(308).url()}
+						src={getSanityImageURL(gallery.landscapeImage).width(622).height(308).url()}
 						alt="images"
 					/>
 				</div>

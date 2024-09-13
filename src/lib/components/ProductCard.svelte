@@ -2,7 +2,7 @@
 	import { Badge } from './ui/badge';
 	import Text from './Text.svelte';
 	import type { Product } from '../../types/product';
-	import { urlFor } from '$lib/sanity';
+	import { getSanityImageURL } from '$lib/sanity';
 	import { capitalizeFirstLetter } from '$lib/utils';
 
 	export let product: Product;
@@ -13,7 +13,7 @@
 		<div class="relative">
 			<img
 				class="aspect-video w-full rounded-t-xl object-cover md:aspect-[4/3]"
-				src={urlFor(product.image).url()}
+				src={getSanityImageURL(product.image).url()}
 				alt={product.name}
 			/>
 			{#if product.allergens && product.allergens.length > 0}

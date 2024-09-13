@@ -34,7 +34,7 @@ export async function getGallery() {
 
 const builder = imageUrlBuilder(client);
 
-export function urlFor(source: SanityImageSource) {
+export function getSanityImageURL(source: SanityImageSource) {
 	return builder.image(source);
 }
 

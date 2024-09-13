@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { urlFor } from '$lib/sanity';
+	import { getSanityImageURL } from '$lib/sanity';
 	import type { Product } from '../../types/product';
 	import Text from './Text.svelte';
 	import * as Dialog from '$lib/components/ui/dialog';
@@ -58,7 +58,7 @@
 			</div>
 			<img
 				class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
-				src={urlFor(product.image).url()}
+				src={getSanityImageURL(product.image).url()}
 				alt={product.name}
 			/>
 		</Dialog.Content>
@@ -97,7 +97,7 @@
 			</div>
 			<img
 				class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
-				src={urlFor(product.image).url()}
+				src={getSanityImageURL(product.image).url()}
 				alt={product.name}
 			/>
 		</Sheet.Content>

@@ -2,7 +2,7 @@
 	import Size from '$lib/components/ThemeSections/Size.svelte';
 	import Decoration from '$lib/components/ThemeSections/Decoration.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import { urlFor } from '$lib/sanity';
+	import { getSanityImageURL } from '$lib/sanity';
 	import { type ThemePage } from '../../types/themePage';
 	import Flavour from '$lib/components/ThemeSections/Flavour.svelte';
 	import Section from '$lib/components/ThemeSections/Section.svelte';
@@ -16,7 +16,7 @@
 	const flavour = themePage.flavour;
 </script>
 
-<div class="bg-white">
+<div class="bg-white pb-8">
 	<Section
 		id="hero"
 		divider="wave"
@@ -28,7 +28,7 @@
 		</div>
 		<img
 			class="mb-0 mt-0 aspect-square max-h-full rounded-3xl object-cover object-top"
-			src={urlFor(themePage.image).url()}
+			src={getSanityImageURL(themePage.image).url()}
 			alt="nallepuh"
 		/>
 	</Section>
