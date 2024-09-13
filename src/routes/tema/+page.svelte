@@ -9,6 +9,7 @@
 	import { Contact } from '$lib/data';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import { cn } from '$lib/utils';
+	import * as Tooltip from '$lib/components/ui/tooltip';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -41,14 +42,20 @@
 	<Flavour {themePage} />
 
 	<section class="mt-20 grid place-items-center">
-		<a
-			aria-label="Beställ via e-post"
-			title="Beställ via e-post"
-			href={Contact.emailLink}
-			class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}
-		>
-			Beställ
-		</a>
+		<Tooltip.Root>
+			<Tooltip.Trigger>
+				<a
+					aria-label="Beställ via e-post"
+					href={Contact.emailLink}
+					class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}
+				>
+					Beställ
+				</a>
+			</Tooltip.Trigger>
+			<Tooltip.Content>
+				<p>Beställ via e-post</p>
+			</Tooltip.Content>
+		</Tooltip.Root>
 	</section>
 </div>
 
