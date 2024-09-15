@@ -10,6 +10,7 @@
 	import { buttonVariants } from '$lib/components/ui/button';
 	import { cn } from '$lib/utils';
 	import * as Tooltip from '$lib/components/ui/tooltip';
+	import TiArrowRight from 'svelte-icons/ti/TiArrowRight.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -24,7 +25,7 @@
 	<Section
 		id="hero"
 		divider="wave"
-		class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-20 "
+		class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-x-20 "
 	>
 		<div>
 			<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
@@ -35,6 +36,26 @@
 			src={getSanityImageURL(themePage.image).url()}
 			alt="nallepuh"
 		/>
+
+		<div class="col-span-2 flex justify-center">
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<a
+						aria-label="Beställ via e-post"
+						href={Contact.emailLink}
+						class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}
+					>
+						Beställ
+						<span class="size-8">
+							<TiArrowRight />
+						</span>
+					</a>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<p>Beställ via e-post</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
+		</div>
 	</Section>
 
 	<Size {size} />
