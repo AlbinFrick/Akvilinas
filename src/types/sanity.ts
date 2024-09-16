@@ -5,6 +5,7 @@ export interface SanityImage {
 	attribution: string;
 	crop: SanityImageCrop;
 	hotspot: SanityImageHotspot;
+	alt?: string;
 }
 
 export interface SanityImageAsset {

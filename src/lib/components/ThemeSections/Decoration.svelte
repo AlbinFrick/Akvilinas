@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getSanityImageURL } from '$lib/sanity';
 	import type { SanityImage } from '../../../types/sanity';
 	import type { Decoration } from '../../../types/themePage';
 	import FigureCard from './FigureCard.svelte';
@@ -18,23 +19,16 @@
 		<div
 			class="mx-auto grid grid-cols-2 overflow-clip rounded-xl *:m-0 *:aspect-square *:object-cover md:w-1/2"
 		>
-			<img src="chocolate.jpg" alt="" />
-			<img src="hooja.jpeg" alt="" />
-			<img src="lemon.jpg" alt="" />
-			<img src="nalle.jpg" alt="" />
+			{#each decoration.base.images as image}
+				<img src={getSanityImageURL(image).url()} alt={image.alt} />
+			{/each}
 		</div>
 	</div>
 	<h3>Figurer</h3>
 	<div class="mx-auto flex max-w-5xl flex-col justify-between gap-4 md:flex-row md:gap-8">
-		<FigureCard
-			title="Enkel"
-			description="Dessa är figurer som inte tar väldigt lång tid att göra att som inte heller nödvändigtvis behöver se ut som något i verkligheten"
-			price={400}
-		/>
-		<FigureCard
-			title="Avancerad"
-			description="Dessa är figurer som inte tar väldigt lång tid att göra att som inte heller nödvändigtvis behöver se ut som något i verkligheten"
-		/>
+		{#each decoration.figures as figure}
+			<FigureCard {figure} />
+		{/each}
 	</div>
 	<div class="flex flex-col gap-4 md:flex-row">
 		<div>
@@ -47,10 +41,9 @@
 		<div
 			class="mx-auto grid grid-cols-2 overflow-clip rounded-xl *:m-0 *:aspect-square *:object-cover md:w-1/2"
 		>
-			<img src="chocolate.jpg" alt="" />
-			<img src="hooja.jpeg" alt="" />
-			<img src="lemon.jpg" alt="" />
-			<img src="nalle.jpg" alt="" />
+			{#each decoration.other.images as image}
+				<img src={getSanityImageURL(image).url()} alt={image.alt} />
+			{/each}
 		</div>
 	</div>
 </Section>

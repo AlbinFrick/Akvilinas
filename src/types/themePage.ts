@@ -22,15 +22,18 @@ export interface Decoration {
 		description: string;
 		images: Array<SanityImage>;
 	};
-	figures: Array<{
-		title: string;
-		description: string;
-		images: Array<SanityImage>;
-	}>;
+	figures: Array<Figure>;
 	other: {
 		description: string;
 		images: Array<SanityImage>;
 	};
+}
+
+export interface Figure {
+	title: string;
+	description: string;
+	images: Array<SanityImage>;
+	price: number | undefined;
 }
 
 export interface Flavour {
