@@ -5,7 +5,7 @@
 </script>
 
 <div class="overflow-clip rounded-xl bg-white">
-	<div class="grid h-44 grid-cols-2 *:m-0 *:aspect-square *:h-full *:w-full *:object-cover">
+	<div class="grid grid-cols-2 *:m-0 *:aspect-square *:h-full *:w-full *:object-cover md:h-44">
 		<img src="chocolate.jpg" alt="" />
 		<img src="hooja.jpeg" alt="" />
 		<img src="lemon.jpg" alt="" />

@@ -32,12 +32,11 @@
 			<p class="text-lg text-gray-600">{themePage.description}</p>
 		</div>
 		<img
-			class="mb-0 mt-0 aspect-square max-h-full rounded-3xl object-cover object-top"
+			class="mx-auto mb-0 mt-0 aspect-square max-h-full max-w-[70%] rounded-3xl object-cover object-top md:max-w-full"
 			src={getSanityImageURL(themePage.image).url()}
 			alt="nallepuh"
 		/>
-
-		<div class="col-span-2 flex justify-center">
+		<div class="flex justify-center md:col-span-2">
 			<Tooltip.Root>
 				<Tooltip.Trigger>
 					<a
