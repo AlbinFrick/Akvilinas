@@ -25,8 +25,9 @@
 	<Section
 		id="hero"
 		divider="wave"
-		class="grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-x-20 "
+		class="relative grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-x-20 "
 	>
+		<div class="absolute top-0 h-16 w-full bg-gradient-to-b from-white to-red-100" />
 		<div>
 			<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
 			<p class="text-lg text-gray-600">{themePage.description}</p>
