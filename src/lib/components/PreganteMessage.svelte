@@ -6,7 +6,7 @@
 </script>
 
 <span>
-	Hej kära besökare! 👋
+	<span class="text-center text-lg"> Hej kära besökare! 👋</span>
 	<br />
 	Jag håller nu på att baka på en liten bebis istället för tårtor, därför har jag pausat alla beställningar
 	på obestämd tid. Kolla gärna på hemsidan och tänk ut något ni vill ha så hoppas jag att jag kan fylla
