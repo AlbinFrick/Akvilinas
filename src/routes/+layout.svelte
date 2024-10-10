@@ -14,6 +14,16 @@
 	import { inject } from '@vercel/analytics';
 
 	inject({ mode: dev ? 'development' : 'production' });
+
+	import { onMount } from 'svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
+	import PreganteMessage from '$lib/components/PreganteMessage.svelte';
+	// Hej kära besökare!\n\n Jag håller nu på att baka på en liten bebis istället för tårtor, därför har jag pausat alla beställningar på obestämd tid. Kolla gärna på hemsidan och tänk ut något ni vill ha så hoppas jag att jag kan fylla era beställningar när den lille är ute!\n\n /Hilda
+	onMount(() => {
+		toast(PreganteMessage, {
+			duration: 99999999
+		});
+	});
 </script>
 
 <svelte:head>
@@ -29,6 +39,7 @@
 	</main>
 </div>
 <Footer />
+<Toaster />
 
 <style>
 	:global(body) {
