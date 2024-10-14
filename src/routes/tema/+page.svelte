@@ -10,7 +10,7 @@
 	import { buttonVariants } from '$lib/components/ui/button';
 	import { cn } from '$lib/utils';
 	import * as Tooltip from '$lib/components/ui/tooltip';
-	import TiArrowRight from 'svelte-icons/ti/TiArrowRight.svelte';
+	import { MoveRight } from 'lucide-svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -43,12 +43,10 @@
 					<a
 						aria-label="Beställ via e-post"
 						href={Contact.emailLink}
-						class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}
+						class={cn(buttonVariants({ size: 'lg' }), 'gap-x-2 text-xl no-underline')}
 					>
 						Beställ
-						<span class="size-8">
-							<TiArrowRight />
-						</span>
+						<MoveRight />
 					</a>
 				</Tooltip.Trigger>
 				<Tooltip.Content>
