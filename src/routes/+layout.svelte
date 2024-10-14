@@ -14,6 +14,16 @@
 	import { inject } from '@vercel/analytics';
 
 	inject({ mode: dev ? 'development' : 'production' });
+
+	import { onMount } from 'svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
+	import PreganteMessage from '$lib/components/PreganteMessage.svelte';
+	onMount(() => {
+		toast(PreganteMessage, {
+			style: 'max-width: 450px; padding: 16px;',
+			duration: 99999999
+		});
+	});
 </script>
 
 <svelte:head>
@@ -29,6 +39,7 @@
 	</main>
 </div>
 <Footer />
+<Toaster />
 
 <style>
 	:global(body) {
