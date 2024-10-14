@@ -54,6 +54,9 @@ importers:
         specifier: ^0.0.7
         version: 0.0.7(svelte@4.2.19)
     devDependencies:
+      '@portabletext/svelte':
+        specifier: ^2.1.11
+        version: 2.1.11(svelte@4.2.19)
       '@sveltejs/adapter-auto':
         specifier: ^2.0.0
         version: 2.1.1(@sveltejs/kit@2.7.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@4.5.5(@types/node@22.7.5)))(svelte@4.2.19)(vite@4.5.5(@types/node@22.7.5)))
@@ -73,13 +76,13 @@ importers:
         specifier: ^10.4.16
         version: 10.4.20(postcss@8.4.47)
       eslint:
-        specifier: ^8.28.0
+        specifier: ^8.57.0
         version: 8.57.1
       eslint-config-prettier:
         specifier: ^8.5.0
         version: 8.10.0(eslint@8.57.1)
       eslint-plugin-svelte:
-        specifier: ^2.30.0
+        specifier: ^2.35.1
         version: 2.44.1(eslint@8.57.1)(svelte@4.2.19)
       postcss:
         specifier: ^8.4.31
@@ -94,7 +97,7 @@ importers:
         specifier: ^0.5.11
         version: 0.5.14(prettier-plugin-svelte@3.2.7(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)
       svelte:
-        specifier: ^4.0.5
+        specifier: ^4.2.12
         version: 4.2.19
       svelte-check:
         specifier: ^3.4.3
@@ -363,6 +366,19 @@ packages:
 
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+
+  '@portabletext/svelte@2.1.11':
+    resolution: {integrity: sha512-ecatiEd80Mw72XXya1swRnzZePuMnrbRf3OGgjTFe1iePcyQ89n8PMpfO3Dpn6bXvjMkIq9yvqB4b9oLLlGOfA==}
+    peerDependencies:
+      svelte: '>=3.47.0 <5.0.0'
+
+  '@portabletext/toolkit@2.0.15':
+    resolution: {integrity: sha512-KRNEUAd6eOxE9y591qC0sE24ZG2q27OHXe0dsPclj4IoEzf8aEuDcHR64wfFtB0aHq9Wdx3pIinmhZZcl35/vg==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+
+  '@portabletext/types@2.0.13':
+    resolution: {integrity: sha512-5xk5MSyQU9CrDho3Rsguj38jhijhD36Mk8S6mZo3huv6PM+t4M/5kJN2KFIxgvt4ONpvOEs1pVIZAV0cL0Vi+Q==}
+    engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
 
   '@sanity/client@6.22.1':
     resolution: {integrity: sha512-2F/byHTbA91iS2YuJA/LmuJbmh4prqMYqhMSQ2PGFBPU2z/trBOByuuYrHAQfjmETu95n1N24t5A8XjqzjQZTQ==}
@@ -2140,6 +2156,17 @@ snapshots:
     optional: true
 
   '@polka/url@1.0.0-next.28': {}
+
+  '@portabletext/svelte@2.1.11(svelte@4.2.19)':
+    dependencies:
+      '@portabletext/toolkit': 2.0.15
+      svelte: 4.2.19
+
+  '@portabletext/toolkit@2.0.15':
+    dependencies:
+      '@portabletext/types': 2.0.13
+
+  '@portabletext/types@2.0.13': {}
 
   '@sanity/client@6.22.1':
     dependencies:
