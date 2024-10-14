@@ -5,14 +5,16 @@
 	export let toast;
 </script>
 
-<span>
-	<span class="text-center text-lg"> Hej kära besökare! 👋</span>
-	<br />
-	Jag håller nu på att baka på en liten bebis istället för tårtor, därför har jag pausat alla beställningar
-	på obestämd tid. Kolla gärna på hemsidan och tänk ut något ni vill ha så hoppas jag att jag kan fylla
-	era beställningar när den lille är ute!
-	<br />
-	<span class="italic">/Hilda</span>
+<span class="flex flex-col gap-4">
+	<span class="text-lg"> Hej kära besökare! 👋</span>
+	<span>
+		Just nu har jag tagit en paus i tårtbakandet då jag är gravid med vårt andra barn. Jag ser
+		framemot att kunna ta beställningar i framtiden istället!
+	</span>
+	<span class="flex flex-col">
+		<span>Varmaste hälsningar,</span>
+		<span>Hilda</span>
+	</span>
 	<button class="absolute right-2 top-2" on:click={() => toast_.dismiss(toast.id)}><XIcon /></button
 	>
 </span>
