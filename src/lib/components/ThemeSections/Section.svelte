@@ -10,7 +10,7 @@
 <section
 	{id}
 	class:angle-clip-path={divider === 'angle'}
-	class={cn('relative px-6 py-16', className)}
+	class={cn('relative px-4 py-6 md:px-6 md:py-16', className)}
 >
 	{#if divider === 'wave'}
 		<div class="custom-shape-divider-bottom-1725664064">

@@ -6,7 +6,7 @@
 </script>
 
 <div class="overflow-clip rounded-xl bg-white">
-	<div class="grid grid-cols-2 *:m-0 *:aspect-square *:h-full *:w-full *:object-cover md:h-44">
+	<div class="grid grid-cols-2 *:m-0 *:aspect-square *:h-full *:w-full *:object-cover md:h-48">
 		{#each figure.images as image}
 			<img src={getSanityImageURL(image).url()} alt={image.alt} />
 		{/each}

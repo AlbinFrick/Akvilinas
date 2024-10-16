@@ -24,8 +24,10 @@
 <div class="bg-white pb-8">
 	<Section id="hero" divider="wave" class="relative w-full bg-red-100">
 		<div class="mx-auto grid max-w-default-content grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-20">
-			<div class="absolute left-0 top-0 h-16 w-screen bg-gradient-to-b from-white to-red-100" />
-			<div>
+			<div
+				class="absolute left-0 top-0 z-0 h-10 w-screen bg-gradient-to-b from-white to-red-100 md:h-14"
+			/>
+			<div class="relative z-10">
 				<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
 				<p class="text-lg text-gray-600">{themePage.description}</p>
 			</div>

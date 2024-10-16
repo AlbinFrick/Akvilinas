@@ -13,8 +13,8 @@
 <Section divider="angle" id="decoration" class="bg-red-100">
 	<div class="mx-auto max-w-default-content space-y-6">
 		<h2 class="mt-0">{decoration.title}</h2>
-		<div class="flex flex-col justify-between overflow-clip rounded-xl md:flex-row">
-			<div>
+		<div class="flex flex-col justify-between gap-4 overflow-clip rounded-xl md:flex-row md:gap-10">
+			<div class="prose-p:m-0 prose-p:text-lg prose-li:text-lg">
 				<PortableText value={decorationDescription} components={{}} />
 			</div>
 			<div
@@ -26,12 +26,14 @@
 			</div>
 		</div>
 		<h3>Figurer</h3>
-		<div class="mx-auto flex max-w-5xl flex-col justify-between gap-4 md:flex-row md:gap-8">
+		<div
+			class="mx-auto flex max-w-5xl flex-col justify-between gap-4 md:!mb-14 md:flex-row md:gap-10"
+		>
 			{#each decoration.figures as figure}
 				<FigureCard {figure} />
 			{/each}
 		</div>
-		<div class="flex flex-col gap-4 md:flex-row">
+		<div class="flex flex-col gap-4 md:flex-row md:gap-10">
 			<div>
 				<h4>Övriga dekorationer</h4>
 				<p>
