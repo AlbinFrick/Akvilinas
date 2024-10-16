@@ -22,37 +22,35 @@
 </script>
 
 <div class="bg-white pb-8">
-	<Section
-		id="hero"
-		divider="wave"
-		class="relative grid grid-cols-1 gap-6 bg-red-100 md:grid-cols-2 md:gap-x-20 "
-	>
-		<div class="absolute top-0 h-16 w-full bg-gradient-to-b from-white to-red-100" />
-		<div>
-			<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
-			<p class="text-lg text-gray-600">{themePage.description}</p>
-		</div>
-		<img
-			class="mx-auto mb-0 mt-0 aspect-square max-h-full max-w-[70%] rounded-3xl object-cover object-top md:max-w-full"
-			src={getSanityImageURL(themePage.image).url()}
-			alt="nallepuh"
-		/>
-		<div class="flex justify-center md:col-span-2">
-			<Tooltip.Root>
-				<Tooltip.Trigger>
-					<a
-						aria-label="Beställ via e-post"
-						href={Contact.emailLink}
-						class={cn(buttonVariants({ size: 'lg' }), 'gap-x-2 text-xl no-underline')}
-					>
-						Beställ
-						<MoveRight />
-					</a>
-				</Tooltip.Trigger>
-				<Tooltip.Content>
-					<p>Beställ via e-post</p>
-				</Tooltip.Content>
-			</Tooltip.Root>
+	<Section id="hero" divider="wave" class="relative w-full bg-red-100">
+		<div class="mx-auto grid max-w-default-content grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-20">
+			<div class="absolute left-0 top-0 h-16 w-screen bg-gradient-to-b from-white to-red-100" />
+			<div>
+				<h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
+				<p class="text-lg text-gray-600">{themePage.description}</p>
+			</div>
+			<img
+				class="mx-auto mb-0 mt-0 aspect-square max-h-full max-w-[70%] rounded-3xl object-cover object-top md:max-w-full"
+				src={getSanityImageURL(themePage.image).url()}
+				alt="nallepuh"
+			/>
+			<div class="flex justify-center md:col-span-2">
+				<Tooltip.Root>
+					<Tooltip.Trigger>
+						<a
+							aria-label="Beställ via e-post"
+							href={Contact.emailLink}
+							class={cn(buttonVariants({ size: 'lg' }), 'gap-x-2 text-xl no-underline')}
+						>
+							Beställ
+							<MoveRight />
+						</a>
+					</Tooltip.Trigger>
+					<Tooltip.Content>
+						<p>Beställ via e-post</p>
+					</Tooltip.Content>
+				</Tooltip.Root>
+			</div>
 		</div>
 	</Section>
 
@@ -60,7 +58,7 @@
 	<Decoration {decoration} />
 	<Flavour {flavour} />
 
-	<section class="mt-20 grid place-items-center">
+	<section class="mx-auto mt-20 grid max-w-default-content place-items-center">
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<a

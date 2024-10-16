@@ -4,7 +4,7 @@
 	export let size: Size;
 </script>
 
-<Section id="size" class="bg-white pt-4">
+<Section id="size" class="mx-auto max-w-default-content bg-white pt-4">
 	<h2>{size.title}</h2>
 	<p>
 		{size.description}
@@ -16,7 +16,9 @@
 			>
 				<span class="text-4xl">8</span>
 			</div>
-			<p class="m-0 text-3xl font-medium">{size.pricesmall}kr</p>
+			{#if size.pricesmall}
+				<p class="m-0 text-3xl font-medium">{size.pricesmall}kr</p>
+			{/if}
 		</div>
 
 		<div class="flex flex-col items-center gap-2">
@@ -25,7 +27,9 @@
 			>
 				<span class="-mt-3">12</span>
 			</div>
-			<p class="m-0 text-3xl font-medium">{size.pricebig}kr</p>
+			{#if size.pricebig}
+				<p class="m-0 text-3xl font-medium">{size.pricebig}kr</p>
+			{/if}
 		</div>
 	</div>
 </Section>

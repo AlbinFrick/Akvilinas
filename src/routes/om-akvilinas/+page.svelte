@@ -3,7 +3,7 @@
 	import Text from '$lib/components/Text.svelte';
 </script>
 
-<div class="mt-8 flex w-full flex-col gap-6 px-6 md:flex-row-reverse">
+<div class="mx-auto mt-8 flex w-full max-w-default-content flex-col gap-6 px-6 lg:flex-row-reverse">
 	<div class="mt-6 snap-y">
 		<h1 class="mb-3 scroll-m-20 text-4xl font-medium tracking-tight lg:text-5xl">Hilda Akvilina</h1>
 		<Text>

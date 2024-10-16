@@ -3,7 +3,7 @@
 	export let flavour: Flavour[];
 </script>
 
-<section id="flavour" class="flex flex-col items-center">
+<section id="flavour" class="mx-auto flex max-w-default-content flex-col items-center">
 	<h2 class="mb-4 text-4xl text-gray-700">Smakmeny</h2>
 	<ul class="list-none p-0">
 		{#each flavour as flavour}

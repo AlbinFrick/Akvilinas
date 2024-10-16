@@ -14,6 +14,9 @@ const config = {
 			}
 		},
 		extend: {
+			maxWidth: {
+				'default-content': '80rem' // This is equivalent to max-w-7xl (80rem = 1280px)
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

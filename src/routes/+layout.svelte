@@ -34,7 +34,7 @@
 <Header />
 <!-- This div is it to make the image grid flow outside of the screen -->
 <div class="min-h-[calc(100vh-120px-64px)] overflow-hidden">
-	<main class="prose mx-auto w-full max-w-7xl font-playfair">
+	<main class="prose mx-auto w-full max-w-full font-playfair">
 		<slot />
 	</main>
 </div>

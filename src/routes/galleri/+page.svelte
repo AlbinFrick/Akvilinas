@@ -5,7 +5,9 @@
 	export let data;
 </script>
 
-<div class="not-prose my-4 flex flex-col gap-4 px-4 md:my-12 lg:gap-9">
+<div
+	class="not-prose mx-auto my-4 flex max-w-default-content flex-col gap-4 px-4 md:my-12 lg:gap-9"
+>
 	{#each data.gallery as gallery}
 		<div class="flex flex-col gap-4 lg:flex-row lg:gap-9">
 			<div class="flex flex-1 flex-col-reverse gap-4 lg:flex-col lg:gap-9">
