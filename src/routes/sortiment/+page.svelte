@@ -10,7 +10,7 @@
   const { products } = data;
 </script>
 
-<section class="px-6 prose-h1:mb-3">
+<section class="px-6 max-w-default-content mx-auto prose-h1:mb-3">
   <h1 class="mt-8">Sortiment</h1>
   <p class="max-w-prose">
     Skicka in din bokningsförfrågan senast två veckor innan önskat datum att
@@ -41,7 +41,7 @@
 </section>
 
 <section
-  class="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-6 p-6 prose-h2:my-0 prose-p:my-0 prose-img:my-0"
+  class="grid max-w-default-content mx-auto grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-6 p-6 prose-h2:my-0 prose-p:my-0 prose-img:my-0"
 >
   {#each products as product}
     <Product {product} />
