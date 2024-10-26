@@ -2,7 +2,6 @@
   import Size from '$lib/components/ThemeSections/Size.svelte';
   import Decoration from '$lib/components/ThemeSections/Decoration.svelte';
   import { getSanityImageURL } from '$lib/sanity';
-  import { type ThemePage } from '../../types/themePage';
   import Flavour from '$lib/components/ThemeSections/Flavour.svelte';
   import Section from '$lib/components/ThemeSections/Section.svelte';
   import { Contact } from '$lib/data';
@@ -10,6 +9,7 @@
   import { cn } from '$lib/utils';
   import * as Tooltip from '$lib/components/ui/tooltip';
   import { MoveRight } from 'lucide-svelte';
+  import type { ThemePage } from '../../types/sanity.types';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -32,11 +32,13 @@
         <h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
         <p class="text-lg text-gray-600">{themePage.description}</p>
       </div>
-      <img
-        class="mx-auto mb-0 mt-0 aspect-square max-h-full max-w-[70%] rounded-3xl object-cover object-top md:max-w-full"
-        src={getSanityImageURL(themePage.image).url()}
-        alt="nallepuh"
-      />
+      {#if themePage.image}
+        <img
+          class="mx-auto mb-0 mt-0 aspect-square max-h-full max-w-[70%] rounded-3xl object-cover object-top md:max-w-full"
+          src={getSanityImageURL(themePage.image).url()}
+          alt="nallepuh"
+        />
+          {/if}
       <div class="flex justify-center md:col-span-2">
         <Tooltip.Root>
           <Tooltip.Trigger>
@@ -59,7 +61,9 @@
 
   <Size {size} />
   <Decoration {decoration} />
-  <Flavour {flavour} />
+  {#if flavour}
+    <Flavour {flavour} />
+  {/if}
 
   <section class="mx-auto mt-20 grid max-w-default-content place-items-center">
     <Tooltip.Root>

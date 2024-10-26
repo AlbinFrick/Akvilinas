@@ -1,12 +1,12 @@
 <script lang="ts">
   import { getSanityImageURL } from '$lib/sanity';
-  import type { Product } from '../../types/product';
   import Text from './Text.svelte';
   import * as Dialog from '$lib/components/ui/dialog';
   import * as Sheet from '$lib/components/ui/sheet';
   import ProductCard from './ProductCard.svelte';
   import { mediaQuery } from 'svelte-legos';
   import { XIcon } from 'lucide-svelte';
+  import type { Product } from '../../types/sanity.types';
 
   export let product: Product;
 
@@ -42,25 +42,29 @@
         </h2>
         <Text>{product.description}</Text>
         <h3 class="text-lg">Pris:</h3>
-        <Text class="text-2xl font-bold">
-          {#each product.price as price, index}
-            <span class="font-bold">{price}
-              {#if index !== product.price.length - 1}
-                {' - '}
-              {/if}</span>
-          {/each}
-          kr
-        </Text>
+        {#if product.price}
+          <Text class="text-2xl font-bold">
+            {#each product.price as price, index}
+              <span class="font-bold">{price}
+                {#if index !== product.price.length - 1}
+                  {' - '}
+                {/if}</span>
+            {/each}
+            kr
+          </Text>
+        {/if}
         {#if product.contents}
           <h3 class="text-lg">Innehåll:</h3>
           <Text>{formatContents(product.contents)}</Text>
         {/if}
       </div>
-      <img
-        class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
-        src={getSanityImageURL(product.image).url()}
-        alt={product.name}
-      />
+      {#if product.image}
+        <img
+          class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
+          src={getSanityImageURL(product.image).url()}
+          alt={product.name}
+        />
+      {/if}
     </Dialog.Content>
   </Dialog.Root>
 {:else}
@@ -81,25 +85,29 @@
         </div>
         <Text>{product.description}</Text>
         <h3 class="text-lg">Pris:</h3>
-        <Text class="text-2xl font-bold">
-          {#each product.price as price, index}
-            <span class="font-bold">{price}
-              {#if index !== product.price.length - 1}
-                {' - '}
-              {/if}</span>
-          {/each}
-          kr
-        </Text>
+        {#if product.price}
+          <Text class="text-2xl font-bold">
+            {#each product.price as price, index}
+              <span class="font-bold">{price}
+                {#if index !== product.price.length - 1}
+                  {' - '}
+                {/if}</span>
+            {/each}
+            kr
+          </Text>
+        {/if}
         {#if product.contents}
           <h3 class="text-lg">Innehåll:</h3>
           <Text>{formatContents(product.contents)}</Text>
         {/if}
       </div>
-      <img
-        class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
-        src={getSanityImageURL(product.image).url()}
-        alt={product.name}
-      />
+      {#if product.image}
+        <img
+          class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
+          src={getSanityImageURL(product.image).url()}
+          alt={product.name}
+        />
+      {/if}
     </Sheet.Content>
   </Sheet.Root>
 {/if}

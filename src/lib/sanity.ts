@@ -1,9 +1,7 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import type { Gallery, Product, ThemePage } from '../types/sanity.types';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import type { ThemePage } from '../types/themePage';
-import type { Product } from '../types/product';
-import type { Gallery } from '../types/gallery';
 
 const client = createClient({
   projectId: '4nos8q8u',
