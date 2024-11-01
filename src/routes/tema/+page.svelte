@@ -38,7 +38,7 @@
           src={getSanityImageURL(themePage.image).url()}
           alt="nallepuh"
         />
-          {/if}
+      {/if}
       <div class="flex justify-center md:col-span-2">
         <Tooltip.Root>
           <Tooltip.Trigger>
