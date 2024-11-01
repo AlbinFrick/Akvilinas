@@ -1,5 +1,6 @@
 <script>
   import Product from '$lib/components/Product.svelte';
+  import UnavailableProduct from '$lib/components/UnavailableProduct.svelte';
   import { buttonVariants } from '$lib/components/ui/button';
   import { Contact } from '$lib/data';
   import { cn } from '$lib/utils';
@@ -8,6 +9,8 @@
   /** @type {import('./$types').PageData} */
   export let data;
   const { products } = data;
+  const unavailableProducts = products.filter((product) => !product.available);
+  const availableProducts = products.filter((product) => product.available);
 </script>
 
 <section class="px-6 max-w-default-content mx-auto prose-h1:mb-3">
@@ -43,7 +46,20 @@
 <section
   class="grid max-w-default-content mx-auto grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-6 p-6 prose-h2:my-0 prose-p:my-0 prose-img:my-0"
 >
-  {#each products as product}
-    <Product {product} />
-  {/each}
+  {#if availableProducts.length > 0}
+    {#each availableProducts as availableProduct}
+      {#if availableProduct.name === 'Tematårta'}
+        <a href="/tema">
+          <Product product={availableProduct} />
+        </a>
+      {:else}
+        <Product product={availableProduct} />
+      {/if}
+    {/each}
+  {/if}
+  {#if unavailableProducts.length > 0}
+    {#each unavailableProducts as unavailableProduct}
+      <UnavailableProduct product={unavailableProduct} />
+    {/each}
+  {/if}
 </section>
