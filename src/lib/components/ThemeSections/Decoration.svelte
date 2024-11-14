@@ -33,34 +33,12 @@
         {/if}
       </div>
       <h3>Figurer</h3>
-      <div class="flex flex-col gap-6 md:flex-row justify-center mx-auto">
+      <div class="flex flex-col gap-6 md:flex-row md:flex-wrap lg:flex-nowrap justify-center mx-auto">
         {#if decoration.figures}
           {#each decoration.figures as figure}
             <FigureCard {figure} />
           {/each}
         {/if}
       </div>
-      <div class="flex flex-col gap-4 md:flex-row md:gap-10 md:!mt-16">
-        <div>
-          <h4>Övriga dekorationer</h4>
-          <div class="prose-p:m-0 prose-p:text-lg prose-li:text-lg">
-            {#if decoration.other && decoration.other.description}
-              <p>
-                {decoration.other.description}
-              </p>
-            {/if}
-          </div>
-        </div>
-        <div
-          class="mx-auto grid grid-cols-2 overflow-clip rounded-xl *:m-0 *:aspect-square *:object-cover md:w-1/2"
-        >
-          {#if decoration.other && decoration.other.images}
-            {#each decoration.other.images as image}
-              <img src={getSanityImageURL(image).url()} alt={image.alt} />
-            {/each}
-          {/if}
-        </div>
-      </div>
-    </div>
   </Section>
 {/if}
