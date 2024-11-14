@@ -9,8 +9,8 @@
 >
   <img
     class="w-full h-48 md:h-72 object-cover m-0"
-    src={getSanityImageURL(figure.images[0]).url()}
-    alt={figure.images[0].alt}
+    src={getSanityImageURL(figure.image).url()}
+    alt={figure.image.alt}
   />
   <div class="p-4 sm:p-8">
     <h5 class="text-2xl font-bold">{figure.title}</h5>
