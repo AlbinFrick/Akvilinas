@@ -4,9 +4,19 @@
   import { Contact } from '$lib/data';
   import { cn } from '$lib/utils';
   import { onMount } from 'svelte';
-  import { fly } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
+
   let isVisible = false;
+  let isMobile = false;
+
   onMount(() => {
+    const mediaQuery = window.matchMedia('(max-width: 640px)');
+    isMobile = mediaQuery.matches;
+
+    mediaQuery.addEventListener('change', (e) => {
+      isMobile = e.matches;
+    });
+
     isVisible = true;
   });
 </script>
@@ -18,7 +28,7 @@
     {#if isVisible}
       <div
         class="mb-9 mt-4 w-full max-w-xl prose-h1:mb-2 lg:mt-32 lg:shrink-0 xl:max-w-2xl"
-        in:fly={{ x: -200, duration: 1000 }}
+        in:fly|fade={{ x: isMobile ? 0 : -200, duration: 1000 }}
       >
         <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Akvilinas fika

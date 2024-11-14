@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import { cubicInOut } from 'svelte/easing';
 
@@ -17,6 +18,8 @@
     node: HTMLElement,
     { y = 0, duration = 1000, delay = 0 },
   ) {
+    const isMobile = browser ? window.innerWidth < 640 : false;
+
     return {
       delay,
       duration,
@@ -24,7 +27,7 @@
         const eased = cubicInOut(t);
         return `
           opacity: ${eased};
-          transform: translateY(${(1 - eased) * y}px)
+          transform: translateY(${isMobile ? 0 : (1 - eased) * y}px)
         `;
       },
     };
