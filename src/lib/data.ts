@@ -28,10 +28,12 @@ Jag heter:
 
 Mitt telefonnummer:`;
 
-const emailLink = `mailto:${base}?subject=${subject}&body=${encodeURIComponent(body)}`;
+const emailLink = `mailto:${base}?subject=${subject}&body=${
+  encodeURIComponent(body)
+}`;
 
 export const Contact = {
-	email: base,
-	emailLink: emailLink,
-	phone: '070 - 322 84 61'
+  email: base,
+  emailLink: emailLink,
+  phone: '070 - 322 84 61',
 };
