@@ -33,16 +33,14 @@
         {/if}
       </div>
       <h3>Figurer</h3>
-      <div
-        class="mx-auto flex max-w-5xl flex-col justify-between gap-4 md:!mb-14 md:flex-row md:gap-10"
-      >
+      <div class="flex flex-col gap-6 md:flex-row justify-center mx-auto">
         {#if decoration.figures}
           {#each decoration.figures as figure}
             <FigureCard {figure} />
           {/each}
         {/if}
       </div>
-      <div class="flex flex-col gap-4 md:flex-row md:gap-10">
+      <div class="flex flex-col gap-4 md:flex-row md:gap-10 md:!mt-16">
         <div>
           <h4>Övriga dekorationer</h4>
           <p>

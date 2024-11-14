@@ -1,18 +1,17 @@
 <script lang="ts">
   import { getSanityImageURL } from '$lib/sanity';
-  import type { Figure } from '../../../types/themePage';
 
-  export let figure: Figure;
+  export let figure;
 </script>
 
-<div class="overflow-clip rounded-xl bg-white">
-  <div
-    class="grid grid-cols-2 *:m-0 *:aspect-square *:h-full *:w-full *:object-cover md:h-48"
-  >
-    {#each figure.images as image}
-      <img src={getSanityImageURL(image).url()} alt={image.alt} />
-    {/each}
-  </div>
+<div
+  class="overflow-clip rounded-xl max-w-md bg-white basis-full mx-auto md:mx-0"
+>
+  <img
+    class="w-full h-48 md:h-72 object-cover m-0"
+    src={getSanityImageURL(figure.images[0]).url()}
+    alt={figure.images[0].alt}
+  />
   <div class="p-4 sm:p-8">
     <h5 class="text-2xl font-bold">{figure.title}</h5>
     <p class="text-lg">{figure.description}</p>
