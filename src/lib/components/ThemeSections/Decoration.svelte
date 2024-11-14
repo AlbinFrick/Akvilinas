@@ -43,10 +43,13 @@
       <div class="flex flex-col gap-4 md:flex-row md:gap-10 md:!mt-16">
         <div>
           <h4>Övriga dekorationer</h4>
-          <p>
-            Detta är dekorationer som inte ingår i basdekorationerna men ändå
-            inte är en figur. Priset kommer vi överens med
-          </p>
+          <div class="prose-p:m-0 prose-p:text-lg prose-li:text-lg">
+            {#if decoration.other && decoration.other.description}
+              <p>
+                {decoration.other.description}
+              </p>
+            {/if}
+          </div>
         </div>
         <div
           class="mx-auto grid grid-cols-2 overflow-clip rounded-xl *:m-0 *:aspect-square *:object-cover md:w-1/2"
