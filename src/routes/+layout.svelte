@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '../app.css';
   import '@fontsource/arapey';
   import '@fontsource-variable/playfair-display';
@@ -18,11 +18,28 @@
   import { onMount } from 'svelte';
   import toast, { Toaster } from 'svelte-french-toast';
   import PreganteMessage from '$lib/components/PreganteMessage.svelte';
+
+  type LocalStorageData = {
+    seen: boolean;
+    expires: number;
+  };
+
   onMount(() => {
-    toast(PreganteMessage, {
-      style: 'max-width: 450px; padding: 16px;',
-      duration: 99999999,
-    });
+    const hasSeenMessageStr = localStorage.getItem('hasSeenPreganteMessage');
+    if (!hasSeenMessageStr) {
+      return null;
+    }
+    const hasSeenMessage = JSON.parse(hasSeenMessageStr) as LocalStorageData;
+
+    if (
+      !hasSeenMessage.seen ||
+      hasSeenMessage.expires < Date.now()
+    ) {
+      toast(PreganteMessage, {
+        style: 'max-width: 450px; padding: 16px;',
+        duration: 99999999,
+      });
+    }
   });
 </script>
 

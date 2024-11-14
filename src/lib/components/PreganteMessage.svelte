@@ -17,7 +17,17 @@
   </span>
   <button
     class="absolute right-2 top-2"
-    on:click={() => toast_.dismiss(toast.id)}
+    on:click={() => {
+      toast_.dismiss(toast.id);
+      const expirationTime = Date.now() + (60 * 60 * 1000); // Current time + 1 hour in milliseconds
+      localStorage.setItem(
+        'hasSeenPreganteMessage',
+        JSON.stringify({
+          seen: true,
+          expires: expirationTime,
+        }),
+      );
+    }}
   >
     <XIcon />
   </button>
