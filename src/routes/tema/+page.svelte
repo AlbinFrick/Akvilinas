@@ -5,11 +5,13 @@
   import Flavour from '$lib/components/ThemeSections/Flavour.svelte';
   import Section from '$lib/components/ThemeSections/Section.svelte';
   import { Contact } from '$lib/data';
-  import { buttonVariants } from '$lib/components/ui/button';
+  import { Button, buttonVariants } from '$lib/components/ui/button';
   import { cn } from '$lib/utils';
   import * as Tooltip from '$lib/components/ui/tooltip';
   import { MoveRight } from 'lucide-svelte';
+  import PreganteMessage from '$lib/components/PreganteMessage.svelte';
   import type { ThemePage } from '../../types/sanity.types';
+  import toast from 'svelte-french-toast';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -40,21 +42,31 @@
         />
       {/if}
       <div class="flex justify-center md:col-span-2">
-        <Tooltip.Root>
-          <Tooltip.Trigger>
-            <a
-              aria-label="Beställ via e-post"
-              href={Contact.emailLink}
-              class={cn(buttonVariants({ size: 'lg' }), 'gap-x-2 text-xl no-underline')}
-            >
-              Beställ
-              <MoveRight />
-            </a>
-          </Tooltip.Trigger>
-          <Tooltip.Content>
-            <p>Beställ via e-post</p>
-          </Tooltip.Content>
-        </Tooltip.Root>
+        <!-- <Tooltip.Root> -->
+        <!--   <Tooltip.Trigger> -->
+        <!--     <a -->
+        <!--       aria-label="Beställ via e-post" -->
+        <!--       href={Contact.emailLink} -->
+        <!--       class={cn(buttonVariants({ size: 'lg' }), 'gap-x-2 text-xl no-underline')} -->
+        <!--     > -->
+        <!--       Beställ -->
+        <!--       <MoveRight /> -->
+        <!--     </a> -->
+        <!--   </Tooltip.Trigger> -->
+        <!--   <Tooltip.Content> -->
+        <!--     <p>Beställ via e-post</p> -->
+        <!--   </Tooltip.Content> -->
+        <!-- </Tooltip.Root> -->
+        <Button
+          on:click={() =>
+          toast(PreganteMessage, {
+            style: 'max-width: 450px; padding: 16px;',
+            duration: 99999999,
+          })}
+          class="gap-x-2 z-10 text-xl"
+        >Beställ
+          <MoveRight />
+        </Button>
       </div>
     </div>
   </Section>
@@ -66,20 +78,30 @@
   {/if}
 
   <section class="mx-auto mt-20 grid max-w-default-content place-items-center">
-    <Tooltip.Root>
-      <Tooltip.Trigger>
-        <a
-          aria-label="Beställ via e-post"
-          href={Contact.emailLink}
-          class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')}
-        >
-          Beställ
-        </a>
-      </Tooltip.Trigger>
-      <Tooltip.Content>
-        <p>Beställ via e-post</p>
-      </Tooltip.Content>
-    </Tooltip.Root>
+    <!-- <Tooltip.Root> -->
+    <!--   <Tooltip.Trigger> -->
+    <!--     <a -->
+    <!--       aria-label="Beställ via e-post" -->
+    <!--       href={Contact.emailLink} -->
+    <!--       class={cn(buttonVariants({ size: 'lg' }), 'text-xl no-underline')} -->
+    <!--     > -->
+    <!--       Beställ -->
+    <!--     </a> -->
+    <!--   </Tooltip.Trigger> -->
+    <!--   <Tooltip.Content> -->
+    <!--     <p>Beställ via e-post</p> -->
+    <!--   </Tooltip.Content> -->
+    <!-- </Tooltip.Root> -->
+
+    <Button
+      on:click={() =>
+      toast(PreganteMessage, {
+        style: 'max-width: 450px; padding: 16px;',
+        duration: 99999999,
+      })}
+      size="lg"
+    >Beställ
+    </Button>
   </section>
 </div>
 
