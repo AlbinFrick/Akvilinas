@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { getSanityImageURL } from '$lib/sanity';
-  import Text from './Text.svelte';
-  import * as Dialog from '$lib/components/ui/dialog';
-  import * as Sheet from '$lib/components/ui/sheet';
-  import ProductCard from './ProductCard.svelte';
-  import { mediaQuery } from 'svelte-legos';
-  import { XIcon } from 'lucide-svelte';
-  import type { Product } from '../../types/sanity.types';
+  import { getSanityImageURL } from "$lib/sanity";
+  import Text from "./Text.svelte";
+  import * as Dialog from "$lib/components/ui/dialog";
+  import * as Sheet from "$lib/components/ui/sheet";
+  import ProductCard from "./ProductCard.svelte";
+  import { mediaQuery } from "svelte-legos";
+  import { XIcon } from "lucide-svelte";
+  import type { Product } from "../../types/sanity.types";
 
   export let product: Product;
 
   function formatContents(array: string[]) {
-    return array.map((item) => item.trim()).join(', ');
+    return array.map((item) => item.trim()).join(", ");
   }
 
-  const isDesktop = mediaQuery('(min-width: 768px)');
+  const isDesktop = mediaQuery("(min-width: 768px)");
 </script>
 
 {#if !product.available}
@@ -45,10 +45,12 @@
         {#if product.price}
           <Text class="text-2xl font-bold">
             {#each product.price as price, index}
-              <span class="font-bold">{price}
+              <span class="font-bold"
+                >{price}
                 {#if index !== product.price.length - 1}
-                  {' - '}
-                {/if}</span>
+                  {" - "}
+                {/if}</span
+              >
             {/each}
             kr
           </Text>
@@ -63,6 +65,7 @@
           class="mt-4 aspect-[4/3] w-full rounded-xl object-cover"
           src={getSanityImageURL(product.image).url()}
           alt={product.name}
+          loading="lazy"
         />
       {/if}
     </Dialog.Content>
@@ -88,10 +91,12 @@
         {#if product.price}
           <Text class="text-2xl font-bold">
             {#each product.price as price, index}
-              <span class="font-bold">{price}
+              <span class="font-bold"
+                >{price}
                 {#if index !== product.price.length - 1}
-                  {' - '}
-                {/if}</span>
+                  {" - "}
+                {/if}</span
+              >
             {/each}
             kr
           </Text>
