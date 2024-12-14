@@ -13,8 +13,12 @@
   import type { ThemePage } from '../../types/sanity.types';
   import toast from 'svelte-french-toast';
 
-  /** @type {import('./$types').PageData} */
-  export let data;
+  
+  interface Props {
+    data: import('./$types').PageData;
+  }
+
+  let { data }: Props = $props();
   const { page } = data;
   const themePage = page[0] as ThemePage;
   const size = themePage.size;
@@ -29,7 +33,7 @@
     >
       <div
         class="absolute left-0 top-0 z-0 h-10 w-screen bg-gradient-to-b from-white to-red-100 md:h-14"
-      />
+></div>
       <div class="relative z-10">
         <h1 class="mb-4 text-5xl text-gray-700">{themePage.title}</h1>
         <p class="text-lg text-gray-600">{themePage.description}</p>

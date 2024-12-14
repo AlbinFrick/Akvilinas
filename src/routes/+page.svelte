@@ -6,8 +6,8 @@
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
 
-  let isVisible = false;
-  let isMobile = false;
+  let isVisible = $state(false);
+  let isMobile = $state(false);
 
   onMount(() => {
     const mediaQuery = window.matchMedia('(max-width: 640px)');

@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import toast_ from 'svelte-french-toast';
   import { XIcon } from 'lucide-svelte';
 
-  export let toast;
+  let { toast } = $props();
 </script>
 
 <span class="flex flex-col gap-4">
@@ -17,7 +17,7 @@
   </span>
   <button
     class="absolute right-2 top-2"
-    on:click={() => {
+    onclick={() => {
       toast_.dismiss(toast.id);
       const expirationTime = Date.now() + (60 * 60 * 1000); // Current time + 1 hour in milliseconds
       localStorage.setItem(

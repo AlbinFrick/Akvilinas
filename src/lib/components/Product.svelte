@@ -8,7 +8,11 @@
   import { XIcon } from "lucide-svelte";
   import type { Product } from "../../types/sanity.types";
 
-  export let product: Product;
+  interface Props {
+    product: Product;
+  }
+
+  let { product }: Props = $props();
 
   function formatContents(array: string[]) {
     return array.map((item) => item.trim()).join(", ");

@@ -1,10 +1,20 @@
 <script lang="ts">
   import { cn } from '$lib/utils';
 
-  export let id: string;
-  let className: string | undefined = undefined;
-  export { className as class };
-  export let divider: 'wave' | 'angle' | undefined = undefined;
+  
+  interface Props {
+    id: string;
+    class?: string | undefined;
+    divider?: 'wave' | 'angle' | undefined;
+    children?: import('svelte').Snippet<[any]>;
+  }
+
+  let {
+    id,
+    class: className = undefined,
+    divider = undefined,
+    children
+  }: Props = $props();
 </script>
 
 <section
@@ -40,9 +50,9 @@
       </svg>
     </div>
 
-    <slot class="absolute inset-0" />
+    {@render children?.({ class: "absolute inset-0", })}
   {:else}
-    <slot />
+    {@render children?.()}
   {/if}
 </section>
 

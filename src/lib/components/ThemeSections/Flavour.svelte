@@ -1,6 +1,10 @@
 <script lang="ts">
   import type { Flavour } from '../../../types/themePage';
-  export let flavour: Flavour[];
+  interface Props {
+    flavour: Flavour[];
+  }
+
+  let { flavour }: Props = $props();
 </script>
 
 <section

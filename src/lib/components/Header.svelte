@@ -31,17 +31,19 @@
 
   <div class="md:hidden">
     <Sheet.Root>
-      <Sheet.Trigger asChild let:builder>
-        <Button
-          builders={[builder]}
-          variant="ghost"
-          class="flex flex-col gap-1.5"
-        >
-          <span class="h-[1.5px] w-8 bg-black" />
-          <span class="h-[1.5px] w-8 bg-black" />
-          <span class="h-[1.5px] w-8 bg-black" />
-        </Button>
-      </Sheet.Trigger>
+      <Sheet.Trigger asChild >
+        {#snippet children({ builder })}
+                <Button
+            builders={[builder]}
+            variant="ghost"
+            class="flex flex-col gap-1.5"
+          >
+            <span class="h-[1.5px] w-8 bg-black"></span>
+            <span class="h-[1.5px] w-8 bg-black"></span>
+            <span class="h-[1.5px] w-8 bg-black"></span>
+          </Button>
+                      {/snippet}
+            </Sheet.Trigger>
       <Sheet.Content side="right">
         <nav class="mt-6">
           <ul class="flex flex-col gap-3">

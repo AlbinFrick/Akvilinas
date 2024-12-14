@@ -7,7 +7,7 @@
   let duration = 1200;
   let y = 100;
 
-  let isVisible = false;
+  let isVisible = $state(false);
 
   onMount(() => {
     isVisible = true;
@@ -50,7 +50,7 @@
         />
         <div
           class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-        />
+></div>
       </div>
     </div>
   {/if}
@@ -67,7 +67,7 @@
         />
         <div
           class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-        />
+></div>
       </div>
       <div class="relative">
         <img
@@ -77,7 +77,7 @@
         />
         <div
           class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-        />
+></div>
       </div>
     </div>
   {/if}
@@ -95,7 +95,7 @@
         />
         <div
           class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-        />
+></div>
       </div>
       <div class="relative">
         <img
@@ -105,7 +105,7 @@
         />
         <div
           class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
-        />
+></div>
       </div>
     </div>
   {/if}

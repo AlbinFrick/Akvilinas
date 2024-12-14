@@ -1,7 +1,11 @@
 <script lang="ts">
   import Section from './Section.svelte';
   import type { Size } from '../../../types/themePage';
-  export let size: Size;
+  interface Props {
+    size: Size;
+  }
+
+  let { size }: Props = $props();
 </script>
 
 <Section id="size" class="mx-auto max-w-default-content bg-white pt-4">

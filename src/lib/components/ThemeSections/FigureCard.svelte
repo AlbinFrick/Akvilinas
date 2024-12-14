@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getSanityImageURL } from '$lib/sanity';
 
-  export let figure;
+  let { figure } = $props();
 </script>
 
 <div

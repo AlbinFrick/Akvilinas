@@ -2,7 +2,11 @@
   import ProductCard from './ProductCard.svelte';
   import type { Product } from '../../types/sanity.types';
 
-  export let product: Product;
+  interface Props {
+    product: Product;
+  }
+
+  let { product }: Props = $props();
 </script>
 
 <div class="relative flex">

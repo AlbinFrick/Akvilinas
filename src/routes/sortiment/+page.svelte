@@ -6,8 +6,14 @@
   import { cn } from '$lib/utils';
   import { FacebookIcon, InstagramIcon } from 'lucide-svelte';
 
-  /** @type {import('./$types').PageData} */
-  export let data;
+  
+  /**
+   * @typedef {Object} Props
+   * @property {import('./$types').PageData} data
+   */
+
+  /** @type {Props} */
+  let { data } = $props();
   const { products } = data;
   const unavailableProducts = products.filter((product) => !product.available);
   const availableProducts = products.filter((product) => product.available);

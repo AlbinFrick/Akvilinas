@@ -5,7 +5,11 @@
   import Section from './Section.svelte';
   import { PortableText } from '@portabletext/svelte';
 
-  export let decoration: ThemePage['decoration'];
+  interface Props {
+    decoration: ThemePage['decoration'];
+  }
+
+  let { decoration }: Props = $props();
 </script>
 
 {#if decoration}

@@ -18,6 +18,11 @@
   import { onMount } from 'svelte';
   import toast, { Toaster } from 'svelte-french-toast';
   import PreganteMessage from '$lib/components/PreganteMessage.svelte';
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 
   type LocalStorageData = {
     seen: boolean;
@@ -52,7 +57,7 @@
 <!-- This div is it to make the image grid flow outside of the screen -->
 <div class="min-h-[calc(100vh-120px-64px)] overflow-hidden">
   <main class="prose mx-auto w-full max-w-full font-playfair">
-    <slot />
+    {@render children?.()}
   </main>
 </div>
 <Footer />
