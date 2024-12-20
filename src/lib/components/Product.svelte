@@ -4,9 +4,9 @@
 	import * as Dialog from '$lib/components/ui/dialog';
 	import * as Sheet from '$lib/components/ui/sheet';
 	import ProductCard from './ProductCard.svelte';
-	import { mediaQuery } from 'svelte-legos';
 	import { XIcon } from 'lucide-svelte';
 	import type { Product } from '../../types/sanity.types';
+	import { MediaQuery } from 'svelte/reactivity';
 
 	interface Props {
 		product: Product;
@@ -18,7 +18,7 @@
 		return array.map((item) => item.trim()).join(', ');
 	}
 
-	const isDesktop = mediaQuery('(min-width: 768px)');
+	const isDesktop = new MediaQuery('min-width: 768px');
 </script>
 
 {#if !product.available}
@@ -32,7 +32,7 @@
 			<ProductCard {product} />
 		</div>
 	</div>
-{:else if $isDesktop}
+{:else if isDesktop.current}
 	<Dialog.Root>
 		<Dialog.Trigger>
 			<ProductCard {product} />
