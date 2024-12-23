@@ -5,18 +5,12 @@
 	import { cn } from '$lib/utils';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { MediaQuery } from 'svelte/reactivity';
 
 	let isVisible = $state(false);
-	let isMobile = $state(false);
+	const isMobile = new MediaQuery('(max-width: 640px)');
 
 	onMount(() => {
-		const mediaQuery = window.matchMedia('(max-width: 640px)');
-		isMobile = mediaQuery.matches;
-
-		mediaQuery.addEventListener('change', (e) => {
-			isMobile = e.matches;
-		});
-
 		isVisible = true;
 	});
 </script>
