@@ -6,7 +6,6 @@
 
 	const links = [
 		{ name: 'Sortiment', href: '/sortiment' },
-		{ name: 'Tematårta', href: '/tema' },
 		{ name: 'Bildgalleri', href: '/galleri' },
 		{ name: 'Om Akvilinas', href: '/om-akvilinas' }
 	];
