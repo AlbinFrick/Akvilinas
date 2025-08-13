@@ -50,13 +50,7 @@
 >
 	{#if availableProducts.length > 0}
 		{#each availableProducts as availableProduct}
-			{#if availableProduct.name === 'Tematårta'}
-				<a href="/tema">
-					<Product product={availableProduct} />
-				</a>
-			{:else}
-				<Product product={availableProduct} />
-			{/if}
+		  <Product product={availableProduct} />
 		{/each}
 	{/if}
 	{#if unavailableProducts.length > 0}
